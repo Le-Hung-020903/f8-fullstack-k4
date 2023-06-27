@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+.form-manager{
+    width: 325px;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.form-group > label {
+    width: 150px;
+    display: inline-block;
+}
+
+.form-signon > label {
+    display: block;
+}
+.form-job{
+    display: flex;
+    flex-direction: column;
+}
+.Login-reset{
+   display: flex;
+   justify-content: center;
+   gap: 6px;
+}
