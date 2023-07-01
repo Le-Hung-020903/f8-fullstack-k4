@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+.form-subscribe {
+    width: 960px;
+    margin: 50px auto 0px;
+    background-color: #334455;
+    padding: 20px 20px 25px;
+    border-radius: 7px;
+}
+.form-subscribe .form-subscribe__title {
+    color: #ffff;
+    font-size: 30px;
+}
+.form-subscribe__title span {
+    color: #ffa500;
+}
+.form-subscribe__desc {
+    padding: 15px 0;
+    line-height: 1.5;
+    width: 60%;
+    color: #ffff;
+}
+.form-subscribe input[type="email"] {
+    padding: 8px 24px;
+    border: none;
+    background: #fff;
+    border-radius: 2px;
+}
+.form-subscribe button[type="submit"] {
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+}
+.form-subscribe:hover input[type="email"]::placeholder {
+    color: #ffa500;
+}
+.form-subscribe:hover input[type="email"] {
+    background: #ddd;
+}
+.form-subscribe:hover button[type="submit"] {
+    background-color: #ffa500;
+    color: #ffff;
+}
