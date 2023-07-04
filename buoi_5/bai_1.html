@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <section class="form-contact">
+        <h2 class="form-contact__heading">
+            Hey there
+        </h2>
+        <p class="form-contact__desc">
+            <span>We'd like to hear from you.</span> Send us your message or just say hy with our contact form or
+            directly via phone, we love to chat
+        </p>
+        <form action="" class="form-detail">
+            <!--? name -->
+            <label class="detail-input">
+                <input type="text" name="" id="" class="contact-input" placeholder="Your name" required>
+                <i class="fa-solid fa-user icon-left"></i>
+                <span class="notification">Enter your name</span>
+                <i class="fa-solid fa-star icon-right"></i>
+                <i class="fa-solid fa-xmark icon-right--x"></i>
+            </label>
+            <!--? email -->
+            <label class="detail-input">
+                <input type="email" name="" id="" class="contact-input" placeholder="your@domain.com" required>
+                <i class="fa-regular fa-envelope icon-left"></i>
+                <span class="notification">Enter your email</span>
+                <i class="fa-solid fa-star icon-right"></i>
+                <i class="fa-solid fa-xmark icon-right--x"></i>
+            </label>
+            <!--? phone -->
+            <label class="detail-input">
+                <input type="text" name="" id="" class="contact-input" placeholder="+84 00 123">
+                <i class="fa-solid fa-mobile-screen-button icon-left"></i>
+                <span class="notification">Enter your number phone</span>
+                <i class="fa-solid fa-star icon-right"></i>
+                <i class="fa-solid fa-xmark icon-right--x"></i>
+            </label>
+            <!--? subject -->
+            <label class="detail-input">
+                <select name="" id="" class="contact-input contact-input--select">
+                    <option value="">Subject</option>
+                    <option value="1">Infomation technogory</option>
+                    <option value="2">Science</option>
+                    <option value="3">physical education</option>
+                </select>
+                <i class="fa-solid fa-book-bookmark icon-left"></i>
+                <i class="fa-solid fa-sort icon-right"></i>
+            </label>
+            <!--? message -->
+            <label class="detail-input">
+                <textarea name="message" id="" cols="30" rows="10" class="contact-input contact-input--textarea"
+                    placeholder=" Message"></textarea>
+                <i class="fa-regular fa-message icon-left"></i>
+                <span class="notification">Enter your message</span>
+                <i class="fa-solid fa-star icon-right"></i>
+                <i class="fa-solid fa-xmark   icon-right--x"></i>
+            </label>
+            <!--? button -->
+            <div class="submit">
+                <input type="checkbox" name="" id="confirm" style="display: none;">
+                <label for="confirm">Send me a copy of this message</label>
+                <button type="submit" class="btn">SEND</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

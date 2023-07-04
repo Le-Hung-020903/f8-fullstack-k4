@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 1170px;
+    margin: 50px auto 0;
+}
+.item {
+    margin-bottom: 15px;
+}
+.item input[type="checkbox"] {
+    display: none;
+}
+.item .collapse {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 16px;
+    font-weight: 600;
+    background-color: orangered;
+    user-select: none;
+    cursor: pointer;
+}
+.collapse .fa-plus,
+.collapse .fa-minus {
+    margin-right: 10px;
+}
+.collapse .fa-minus {
+    display: none;
+}
+.item .desc {
+    padding: 20px;
+}
+.item .desc p {
+    font-size: 18px;
+    font-family: 600;
+}
+.item .desc span {
+    font-weight: bold;
+}
+.item .desc ol {
+    text-indent: 10px;
+}
+.item input[type="checkbox"]:checked + label i.fa-minus {
+    display: inline-block;
+}
+.item input[type="checkbox"]:checked + label i.fa-plus {
+    display: none;
+}
+.item input[type="checkbox"]:checked ~ .desc {
+    display: block;
+}
+.item input[type="checkbox"]:not(:checked) ~ .desc {
+    display: none;
+}

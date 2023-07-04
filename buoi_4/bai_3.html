@@ -4,144 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style_3.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
-    <title>Bài 3</title>
+    <title>Document</title>
 </head>
 
 <body>
     <section class="best-seller">
         <div class="container">
-            <input type="radio" name="option" id="Skincare" checked>
-            <input type="radio" name="option" id="Haircare">
-            <input type="radio" name="option" id="Cosmetics Cases">
-            <input type="radio" name="option" id="Fragrance">
-            <input type="radio" name="option" id="Makeup">
-
             <h2 class="best-seller__heading">
                 Best Seller
             </h2>
-            <nav class="navbar">
-                <ul class="list">
-                    <!--? item 1 -->
-                    <li class="item item-1">
-                        <label for="Skincare">Skincare</label>
-                    </li>
-                    <!--? item 2 -->
-                    <li class="item item-2">
-                        <label for="Haircare">Haircare</label>
-                    </li>
-                    <!--? item 3 -->
-                    <li class="item item-3">
-                        <label for="Cosmetics Cases">Cosmetics Cases</label>
-                    </li>
-                    <!--? item 4 -->
-                    <li class="item item-4">
-                        <label for="Fragrance">Fragrance</label>
-                    </li>
-                    <!--? item 5 -->
-                    <li class="item item-5">
-                        <label for="Makeup">Makeup</label>
-                    </li>
-                </ul>
+            <input type="radio" name="product" class="product" id="skincare" checked>
+            <input type="radio" name="product" class="product" id="haircare">
+            <input type="radio" name="product" class="product" id="cosmetics-cases">
+            <input type="radio" name="product" class="product" id="fragrance">
+            <input type="radio" name="product" class="product" id="makeup">
+
+            <nav class="list-of-product">
+                <label class="list-of-product__product-name" for="skincare">Skincare</label>
+                <label class="list-of-product__product-name" for="haircare">Haircare</label>
+                <label class="list-of-product__product-name" for="cosmetics-cases">Cosmetics cases</label>
+                <label class="list-of-product__product-name" for="fragrance">Fragrance</label>
+                <label class="list-of-product__product-name" for="makeup">Makeup</label>
             </nav>
-            <!--? skincare-product -->
-            <div class="list-products" id="skincare-product">
-                <!-- item 1 -->
-                <article class="skincare-product">
-                    <img src="./img/skincare-product-1-img1.jpg" alt="" class="thumb skincare-product-1-img1">
-                    <img src="./img/skincare-product-1-img2.webp" alt="" class="thumb skincare-product-1-img2">
-                    <div class="action-button">
-                        <div class="icon">
-                            <a href="#!"><i class="fa-regular fa-heart"></i></a>
-                            <a href="#!"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
-                            <a href="#!"><i class="fa-solid fa-eye"></i></a>
+
+            <div class="product-list">
+                <!--? item 1 -->
+                <article class="product-item">
+                    <div class="product-thumb">
+                        <a href="#!">
+                            <img src="./img/skincare-product-1-img1.jpg" alt="Skincare" class="product-img">
+                            <img src="./img/skincare-product-1-img2.webp" alt="Skincare" class="product-img">
+                        </a>
+                        <div class="action-button">
+                            <div class="action-button__above">
+                                <button type="submit" class="icon">
+                                    <img src="./icon/heart.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/arrow_1.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/eye.png" alt="">
+                                </button>
+                            </div>
+                            <div class="action-button__below">
+                                <button type="submit" class="add-to-cart">
+                                    Add To Cart
+                                </button>
+                            </div>
                         </div>
-                        <button type="submit">Add To Cart</button>
                     </div>
-                    <div class="info-poduct">
-                        <div class="rating">
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
+                    <div class="prodcut-info">
+                        <div class="product-quanlity">
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                         </div>
-                        <h3 class="info-product__name">Skincare item 1</h3>
-                        <span class="info-product_price">$122.00</span>
+                        <h3 class="product-name">
+                            skincare ban ngày
+                        </h3>
+                        <span class="product-price">$122.00</span>
                     </div>
                 </article>
-                <!-- item 2 -->
-                <article class="skincare-product">
-                    <img src="./img/skincare-product-1-img3.jpeg" alt="" class="thumb skincare-product-1-img1">
-                    <img src="./img/skincare-product-1-img4.jpg" alt="" class="thumb skincare-product-1-img2">
-                    <div class="action-button">
-                        <div class="icon">
-                            <a href="#!"><i class="fa-regular fa-heart"></i></a>
-                            <a href="#!"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
-                            <a href="#!"><i class="fa-solid fa-eye"></i></a>
+                <!--? item 2 -->
+                <article class="product-item">
+                    <div class="product-thumb">
+                        <a href="#!">
+                            <img src="./img/skincare-product-1-img1.jpg" alt="Skincare" class="product-img">
+                            <img src="./img/skincare-product-1-img2.webp" alt="Skincare" class="product-img">
+                        </a>
+                        <div class="action-button">
+                            <div class="action-button__above">
+                                <button type="submit" class="icon">
+                                    <img src="./icon/heart.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/arrow_1.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/eye.png" alt="">
+                                </button>
+                            </div>
+                            <div class="action-button__below">
+                                <button type="submit" class="add-to-cart">
+                                    Add To Cart
+                                </button>
+                            </div>
                         </div>
-                        <button type="submit">Add To Cart</button>
                     </div>
-                    <div class="info-poduct">
-                        <div class="rating">
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
+                    <div class="prodcut-info">
+                        <div class="product-quanlity">
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
                         </div>
-                        <h3 class="info-product__name">Skincare item 1</h3>
-                        <span class="info-product_price">$122.00</span>
+                        <h3 class="product-name">
+                            skincare ban ngày
+                        </h3>
+                        <span class="product-price">$122.00</span>
                     </div>
                 </article>
-                <!-- item 3 -->
-                <article class="skincare-product">
-                    <img src="./img/skincare-product-1-img1.jpg" alt="" class="thumb skincare-product-1-img1">
-                    <img src="./img/skincare-product-1-img2.webp" alt="" class="thumb skincare-product-1-img2">
-                    <div class="action-button">
-                        <div class="icon">
-                            <a href="#!"><i class="fa-regular fa-heart"></i></a>
-                            <a href="#!"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
-                            <a href="#!"><i class="fa-solid fa-eye"></i></a>
+                <!--? item 3 -->
+                <article class="product-item">
+                    <div class="product-thumb">
+                        <a href="#!">
+                            <img src="./img/skincare-product-1-img1.jpg" alt="Skincare" class="product-img">
+                            <img src="./img/skincare-product-1-img2.webp" alt="Skincare" class="product-img">
+                        </a>
+                        <div class="action-button">
+                            <div class="action-button__above">
+                                <button type="submit" class="icon">
+                                    <img src="./icon/heart.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/arrow_1.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/eye.png" alt="">
+                                </button>
+                            </div>
+                            <div class="action-button__below">
+                                <button type="submit" class="add-to-cart">
+                                    Add To Cart
+                                </button>
+                            </div>
                         </div>
-                        <button type="submit">Add To Cart</button>
                     </div>
-                    <div class="info-poduct">
-                        <div class="rating">
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
+                    <div class="prodcut-info">
+                        <div class="product-quanlity">
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                         </div>
-                        <h3 class="info-product__name">Skincare item 1</h3>
-                        <span class="info-product_price">$122.00</span>
+                        <h3 class="product-name">
+                            skincare ban ngày
+                        </h3>
+                        <span class="product-price">$122.00</span>
                     </div>
                 </article>
-                <!-- item 4 -->
-                <article class="skincare-product">
-                    <img src="./img/skincare-product-1-img1.jpg" alt="" class="thumb skincare-product-1-img1">
-                    <img src="./img/skincare-product-1-img2.webp" alt="" class="thumb skincare-product-1-img2">
-                    <div class="action-button">
-                         <div class="icon">
-                            <a href="#!"><i class="fa-regular fa-heart"></i></a>
-                            <a href="#!"><i class="fa-solid fa-arrow-right-arrow-left"></i></a>
-                            <a href="#!"><i class="fa-solid fa-eye"></i></a>
+                <!--? item 4 -->
+                <article class="product-item">
+                    <div class="product-thumb">
+                        <a href="#!">
+                            <img src="./img/skincare-product-1-img1.jpg" alt="Skincare" class="product-img">
+                            <img src="./img/skincare-product-1-img2.webp" alt="Skincare" class="product-img">
+                        </a>
+                        <div class="action-button">
+                            <div class="action-button__above">
+                                <button type="submit" class="icon">
+                                    <img src="./icon/heart.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/arrow_1.png" alt="">
+                                </button>
+                                <button type="submit" class="icon">
+                                    <img src="./icon/eye.png" alt="">
+                                </button>
+                            </div>
+                            <div class="action-button__below">
+                                <button type="submit" class="add-to-cart">
+                                    Add To Cart
+                                </button>
+                            </div>
                         </div>
-                        <button type="submit">Add To Cart</button>
                     </div>
-                    <div class="info-poduct">
-                        <div class="rating">
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
-                            <i class="fa-solid fa-star" style="color: #e9e22b;"></i>
+                    <div class="prodcut-info">
+                        <div class="product-quanlity">
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
+                            <i class="fa-solid fa-star" style="color: black;"></i>
                             <i class="fa-solid fa-star" style="color: black;"></i>
                         </div>
-                        <h3 class="info-product__name">Skincare item 1</h3>
-                        <span class="info-product_price">$122.00</span>
+                        <h3 class="product-name">
+                            skincare ban ngày
+                        </h3>
+                        <span class="product-price">$122.00</span>
                     </div>
                 </article>
             </div>
