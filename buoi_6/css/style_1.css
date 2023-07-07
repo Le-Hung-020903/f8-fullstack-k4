@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    /* font-size: 10px; */
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1000px;
+    margin: 50px auto 0;
+}
+/* =================== MENU ===================  */
+.menu-dropdowm {
+    display: flex;
+    align-items: center;
+}
+/* =================== LOGO ===================  */
+.logo {
+    color: #666;
+    padding: 10px;
+    border: 1px solid #666;
+    border-right: none;
+}
+.logo i {
+    padding: 12px;
+}
+.logo i:hover {
+    background: rgb(17, 164, 237);
+    color: #fff;
+}
+/* =================== NAVBAR ===================  */
+.navbar {
+    width: 100%;
+}
+.navbar .menu {
+    display: flex;
+    border: 1px solid #666;
+}
+.navbar .sub-menu__1 {
+    position: relative;
+    padding: 10px;
+    border-right: 1px solid #666;
+    cursor: pointer;
+}
+.navbar .sub-menu__1:hover .sub-menu__2 {
+    display: block;
+    transition-delay: 0.2s;
+}
+.menu .sub-menu__1 a {
+    display: block;
+    color: #666;
+    padding: 12px;
+}
+.menu .sub-menu__1 > a:hover {
+    background: rgb(17, 164, 237);
+    color: #fff;
+}
+.menu .sub-menu__1:last-child {
+    margin-left: auto;
+    border-left: 1px solid #666;
+}
+.menu .sub-menu__1 i:not(:first-child) {
+    padding: 0 3px;
+}
+/* =================== Menu__2 ===================  */
+.sub-menu__2 {
+    top: 62px;
+    left: -5px;
+    position: absolute;
+    width: 160px;
+    background: #fff;
+    box-shadow: 1px 1px 5px 5px #dbd9d9;
+    display: none;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+.sub-menu__2::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    border-color: transparent transparent #fff transparent;
+    border-style: solid;
+    border-width: 10px;
+    top: -17px;
+    left: 17px;
+    z-index: 1;
+}
+.sub-menu__2 li:not(:last-child) a {
+    border-bottom: 1px solid #666;
+}
+.sub-menu__2 li:hover {
+    opacity: 0.3;
+}
+.sub-menu__2 i {
+    padding-right: 10px;
+}
