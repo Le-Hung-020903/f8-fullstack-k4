@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Asap", sans-serif;
+}
+.main-content {
+    position: relative;
+}
+
+.banner-project img {
+    width: 100%;
+}
+.banner-info {
+    border-radius: 5px;
+    position: absolute;
+    background: #ffff;
+    color: black;
+    top: 35%;
+    left: 10%;
+    padding: 30px 20px;
+}
+.banner__heading {
+    color: #dc5e55;
+    font-size: 25px;
+    font-weight: 700;
+}
+.banner__desc {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+.banner__location {
+    margin-top: 10px;
+}
+.banner__location i {
+    color: #fff;
+    margin-right: 5px;
+}
+.banner__price {
+    position: absolute;
+    display: inline-block;
+    top: 87%;
+    left: 70%;
+    font-weight: 700;
+    font-size: 19px;
+    border-radius: 4px;
+    padding: 15px 30px;
+    background: #dc5e55;
+    color: #fff;
+}

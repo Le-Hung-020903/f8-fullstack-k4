@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Asap", sans-serif;
+}
+.main-content {
+    width: 1170px;
+    margin: 50px auto 0;
+}
+.discovery__title {
+    position: relative;
+    font-size: 17px;
+}
+.discovery__title::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    background-color: #ddd;
+    width: calc(100% - 398px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+}
+/*================= navigation ============================  */
+input[type="radio"] {
+    display: none;
+}
+.discovery__navbar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 15px 0;
+    margin: 7px 0;
+}
+.discovery__item {
+    flex: 1;
+    color: black;
+}
+.discovery__item label {
+    font-size: 11px;
+    display: block;
+    text-align: center;
+    padding: 15px 17px;
+    background-color: #e5e5e5;
+    border-radius: 99px;
+    min-width: max-content;
+    transition: background-color 0.3s ease;
+}
+.discovery__item span {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: inline-block;
+    font-weight: 500;
+}
+/* ======= action ======= */
+input[type="radio"]:checked + label {
+    background-color: #af7b38;
+    color: #fff;
+}
+/*================= discovery__house-list ======================  */
+.discovery__house-list {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.house-item {
+    flex: 1;
+    position: relative;
+}
+.house-item img {
+    width: 100%;
+    height: 250px;
+    border-radius: 4px;
+    object-fit: cover;
+    opacity: 0.6; /* Đặt độ mờ cho ảnh */
+    transition: opacity 0.3s ease;
+}
+.house-item img:hover {
+    opacity: 1;
+}
+.house-item__title,
+.house-item__desc {
+    position: absolute;
+}
+.house-item__title {
+    top: 10%;
+    left: 7%;
+    color: #fff;
+    font-weight: 700;
+}
+.house-item__desc {
+    left: 7%;
+    bottom: 10%;
+    color: #ffff;
+    font-weight: 200;
+}
+.house-item__desc span {
+    font-weight: 700;
+}
