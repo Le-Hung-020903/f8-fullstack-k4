@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.services {
+    margin-top: 30px;
+}
+.main-content {
+    width: 1170px;
+    margin: 0 auto;
+}
+.services__title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.services__desc {
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.services-list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+.service-item {
+    flex: 1 0 30%;
+}
+.service-item__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-item__img img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.service-item__title {
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+.service-item__desc {
+    margin: 20px 0 20px;
+    text-align: center;
+}
+.service-item__btn {
+    padding: 10px 20px;
+    background: blue;
+    color: #fff;
+    display: block;
+    border: 1px solid blue;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0 auto;
+    transition-property: background, color;
+    transition: 0.3s 0.3s ease-in;
+}
+.service-item__btn:hover {
+    cursor: pointer;
+    background: #fff;
+    color: blue;
+}

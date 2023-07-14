@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- embed font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700;800&display=swap" rel="stylesheet">
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/style_2.css">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <section class="shopping">
+        <div class="main-content">
+            <input type="radio" name="shopping" id="shopping">
+            <label for="shopping"><i class="fa-solid fa-bag-shopping"></i></label>
+            <div class="shopping__overlay"></div>
+            <div class="shopping-cart">
+                <div class="shopping-cart__top">
+                    <h3 class="shopping-cart__title">
+                        Shopping Cart
+                        <span>4</span>
+                    </h3>
+                    <a href="#!" class="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+                <div class="shopping-cart__list">
+                    <!--? item 1 -->
+                    <div class="shopping-cart__item">
+                        <img src="./img/iphone14.png" alt="" class="shopping-cart__img">
+                        <div class="shopping-cart__info">
+                            <p class="shopping-cart__desc">Iphone 14 Pro Max 516Gb</ơ>
+                            <div class="shopping-cart__value">
+                                <div class="shopping-cart__quantity">
+                                    <button type="submit"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="shopping-cart__number">01</span>
+                                    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <div class="shopping-cart__total">
+                                    <span class="total__quantity">1x</span>
+                                    <span class="total__price">$570</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="shopping-cart__close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                    <!--? item 2 -->
+                    <div class="shopping-cart__item">
+                        <img src="./img/tainghe.png" alt="" class="shopping-cart__img">
+                        <div class="shopping-cart__info">
+                            <p class="shopping-cart__desc">Apple Airpods Pro</ơ>
+                            <div class="shopping-cart__value">
+                                <div class="shopping-cart__quantity">
+                                    <button type="submit"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="shopping-cart__number">01</span>
+                                    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <div class="shopping-cart__total">
+                                    <span class="total__quantity">1x</span>
+                                    <span class="total__price">$200</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="shopping-cart__close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                    <!--? item 3 -->
+                    <div class="shopping-cart__item">
+                        <img src="./img/ipad-pro-m2.png" alt="" class="shopping-cart__img">
+                        <div class="shopping-cart__info">
+                            <p class="shopping-cart__desc">iPad Pro M2 11" WiFi</ơ>
+                            <div class="shopping-cart__value">
+                                <div class="shopping-cart__quantity">
+                                    <button type="submit"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="shopping-cart__number">01</span>
+                                    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <div class="shopping-cart__total">
+                                    <span class="total__quantity">1x</span>
+                                    <span class="total__price">$200</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="shopping-cart__close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                    <!--? item 4 -->
+                    <div class="shopping-cart__item">
+                        <img src="./img/macbook.png" alt="" class="shopping-cart__img">
+                        <div class="shopping-cart__info">
+                            <p class="shopping-cart__desc">Macbook Pro 16 inch</ơ>
+                            <div class="shopping-cart__value">
+                                <div class="shopping-cart__quantity">
+                                    <button type="submit"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="shopping-cart__number">01</span>
+                                    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <div class="shopping-cart__total">
+                                    <span class="total__quantity">1x</span>
+                                    <span class="total__price">$2000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="shopping-cart__close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="shopping-cart__subtotal">
+                    <div class="subtotal">
+                        <h4 class="subtotal__title">Subtotal</h4>
+                        <span class="subtotal__price">$920.00</span>
+                    </div>
+                    <p class="subtotal__desc">Taxes and shipping calculated at checkout</p>
+                    <button type="submit">View Cart</button>
+                    <button type="submit">Add To Cart</button>
+                    <div class="subtotal__shipping">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Spend $ 499.00 to free Shipping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

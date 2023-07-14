@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Manrope", sans-serif;
+    background: #e8e8e9 url("../img/background.jpg") no-repeat bottom / cover
+        fixed;
+}
+a {
+    text-decoration: none;
+}
+.mega-menu {
+    background: #f7f7f9;
+    /* padding: 25px 0; */
+}
+.main-content {
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*================== LOGO ===============*/
+.mega-menu__logo a {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+}
+/*================== NAVIGATION ===============*/
+.mega-menu__navigation {
+    margin-left: auto;
+}
+.menu {
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+.menu__item > a {
+    color: black;
+    cursor: pointer;
+    padding: 25px 0;
+    margin-right: 2px;
+    display: inline-block;
+}
+.menu__item:hover > a {
+    color: #8e8b8b;
+}
+.menu__item:hover .sub-menu {
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+/*================== INFO ===============*/
+.mega-menu__info {
+    margin-left: 40px;
+    display: flex;
+    gap: 20px;
+}
+.mega-menu__info i:hover {
+    color: #8e8b8b;
+}
+/*================== SUB-MENU ===============*/
+.sub-menu {
+    position: absolute;
+    left: -521px;
+    right: -94px;
+    top: 67px;
+    padding: 25px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+.sub-menu a {
+    color: black;
+    font-size: 15px;
+}
+.sub-menu__documents {
+    display: flex;
+}
+.sub-menu__title {
+    font-size: 17px;
+    color: rgb(147, 141, 141);
+    font-weight: 800;
+}
+.sub-menu__usage-styleguide {
+    width: 35%;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+.sub-menu__list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.sub-menu__item {
+    width: calc(100% / 2 - 20px);
+}
+
+.sub-menu__item a {
+    display: inline-block;
+    position: relative;
+}
+
+.sub-menu__item a::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background: black;
+    border-radius: 3px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.sub-menu__item a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.sub-menu__styleguide {
+    margin-top: 30px;
+}
+.elements {
+    width: 65%;
+    padding: 30px;
+}
+.elements .sub-menu__item {
+    width: calc(100% / 3 - 20px);
+}
