@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    background: #eeedef;
+}
+.navigation {
+    width: 700px;
+    margin: 40px auto;
+}
+
+.navigation label {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+.navigation label span {
+    padding: 15px 10px;
+}
+.navigation > label:hover span {
+    background: #288acb;
+    color: #fff;
+    transition: 0.3s ease;
+}
+.navigation > input[type="radio"]:checked + label span {
+    background: #288acb;
+    color: #fff;
+}
+.navigation-list {
+    position: relative;
+}
+.navigation-list li {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    top: 2px;
+    padding: 15px;
+    width: 655px;
+    overflow: auto;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition: 1s ease;
+    transform-origin: 0% 0%;
+}
+.navigation-submenu__title {
+    font-size: 25px;
+    color: rgb(77, 69, 69);
+    width: 656px;
+}
+.navigation-submenu__desc {
+    margin-top: 10px;
+    color: gray;
+}
+/* ============ Checked ============== */
+.navigation > #simples:checked ~ .navigation-list .navigation-item--simples,
+.navigation > #algoritmo:checked ~ .navigation-list .navigation-item--algoritmo,
+.navigation > #Brara:checked ~ .navigation-list .navigation-item--Brara,
+.navigation > #Captcha:checked ~ .navigation-list .navigation-item--Captcha {
+    opacity: 1;
+}
+/* ============ Animation ============== */
+.animation > .navigation-list {
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+}
+.animation > .navigation-list > li {
+    transform: rotateX(-80deg);
+}
+.animation > #simples:checked ~ .navigation-list .navigation-item--simples,
+.animation > #algoritmo:checked ~ .navigation-list .navigation-item--algoritmo,
+.animation > #Brara:checked ~ .navigation-list .navigation-item--Brara,
+.animation > #Captcha:checked ~ .navigation-list .navigation-item--Captcha {
+    transform: rotateX(0deg);
+    transition-delay: 0.3s;
+}

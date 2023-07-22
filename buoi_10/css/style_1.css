@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.section-header {
+    background-color: #31a9f7;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.header-title {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    color: #fff;
+    text-align: right;
+}
+.header-title__heading {
+    font-size: 40px;
+    font-weight: 900;
+}
+.header-title__inspired {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    font-size: 25px;
+}
+.header-title__inspired span {
+    font-weight: 100;
+    font-size: 20px;
+    margin-right: 4px;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    clip-path: circle(100px at left top);
+    transition: all 0.5s ease;
+}
+.toggle {
+    display: inline-block;
+}
+.icon-return {
+    visibility: hidden;
+}
+.icon-bar,
+.icon-return {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #05a8f5;
+    font-size: 30px;
+    transition: rotate 0.4s ease;
+    rotate: 0deg;
+}
+.menu {
+    margin: 70px 0 0 10px;
+    display: none;
+    transition: all 0.4s;
+}
+.menu_item {
+    margin-top: 20px;
+}
+.menu-item .menu_item-link {
+    display: block;
+    width: 100%;
+    padding: 4px 100px 4px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #05a8f5;
+    cursor: pointer;
+}
+.menu_item-link:focus {
+    color: #000;
+    background: #ddd;
+}
+#toggle:checked ~ .navbar {
+    clip-path: circle(200% at left top);
+}
+#toggle:checked ~ .navbar .toggle .icon-return {
+    visibility: initial;
+}
+#toggle:checked ~ .navbar .menu {
+    display: inline-block;
+}
+#toggle:checked ~ .navbar .toggle .icon-bar {
+    visibility: hidden;
+}
+#toggle:checked ~ .navbar .toggle i {
+    rotate: 180deg;
+}
