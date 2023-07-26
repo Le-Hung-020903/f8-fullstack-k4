@@ -34,13 +34,14 @@ body {
 .email-container:hover::after {
     transform: scale(0.8);
 }
-.email-container:hover .email-paper{
-    transform: translateY(-200px) translateX(-50%);
+.email-container:hover .email-paper {
+    /* transform: translateY(-200px) translateX(-50%); */
     z-index: -1;
-    transition-delay: 0.3s;
-    height: 200px;
+    height: 400px;
+    transition: height 0.2s linear;
+    transition-delay: 0.4s;
 }
-.email-container:hover .email-circle__item{
+.email-container:hover .email-circle__item {
     margin-top: 35px;
     transition-delay: 0.3s;
 }
@@ -79,10 +80,10 @@ body {
 }
 .email-paper {
     position: absolute;
+    bottom: 0;
     width: 330px;
     height: 100px;
     background: #fff;
-    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -3;
