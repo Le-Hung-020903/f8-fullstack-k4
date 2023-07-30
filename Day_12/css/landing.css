@@ -1,0 +1,708 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=Titillium+Web:wght@300;400;600;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, label {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: inside none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0 100px;
+  background: url(../img/landing-background.jpg) no-repeat 0;
+  background-size: cover;
+}
+@media screen and (min-width: 1366px) {
+  .landing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
+}
+.landing .landing-dot {
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  z-index: -1;
+  width: 64%;
+  height: 140%;
+  pointer-events: none;
+  border-radius: 50%;
+  background: url(../img/dot.png) repeat 0 0 #fff;
+}
+.landing input#login:checked ~ .container .row .landing-content .btn label[for=login] {
+  color: #3e3f5e;
+  background-color: #fff;
+  cursor: auto;
+}
+.landing input#login:checked ~ .container .row .form-login {
+  display: block;
+}
+@media screen and (min-width: 1366px) {
+  .landing input#login:checked ~ .container .row .form-login {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.landing input#register:checked ~ .container .row .landing-content .btn label[for=register] {
+  color: #3e3f5e;
+  background-color: #fff;
+  cursor: auto;
+}
+.landing input#register:checked ~ .container .row .form-register {
+  display: block;
+}
+@media screen and (min-width: 1366px) {
+  .landing input#register:checked ~ .container .row .form-register {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.landing .container .row .landing-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 1366px) {
+  .landing .container .row .landing-content {
+    width: 584px;
+    position: absolute;
+    top: 16%;
+    left: 6%;
+  }
+}
+@media screen and (min-width: 1501px) {
+  .landing .container .row .landing-content {
+    left: 13%;
+  }
+}
+.landing .container .row .landing-content .landing-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.landing .container .row .landing-content .landing-logo img {
+  display: block;
+}
+.landing .container .row .landing-content span {
+  margin-top: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1em;
+}
+.landing .container .row .landing-content h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.75rem;
+  color: #fff;
+  line-height: 1em;
+  position: relative;
+  top: -10px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .landing-content h1 {
+    font-size: 6.5rem;
+  }
+}
+.landing .container .row .landing-content p {
+  margin: 10px auto 0;
+  width: 384px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 24px;
+  color: #fff;
+}
+@media screen and (min-width: 1501px) {
+  .landing .container .row .landing-content p {
+    margin-top: 30px;
+  }
+}
+.landing .container .row .landing-content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .landing-content .btn {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1501px) {
+  .landing .container .row .landing-content .btn {
+    margin-top: 90px;
+  }
+}
+.landing .container .row .landing-content .btn label {
+  width: 50%;
+  height: 54px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 54px;
+  font-weight: 700;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-family: "Rajdhani", sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.landing .container .row .landing-content .btn label.btn-login {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.landing .container .row .landing-content .btn label.btn-register {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .landing-content .btn label {
+    width: 180px;
+  }
+}
+.landing .container .row .form-login {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .form-login {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .landing .container .row .form-login {
+    display: block;
+    width: 484px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 80px;
+    margin-top: 0;
+    transform: translate(50%, 0px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s ease-in-out;
+    transition-timing-function: opacity, transform, visibility;
+  }
+}
+@media screen and (min-width: 1501px) {
+  .landing .container .row .form-login {
+    right: 13%;
+  }
+}
+.landing .container .row .form-login .form-login__content {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  padding: 40px 32px;
+  background-color: #fff;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  border-radius: 12px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .form-login .form-login__content {
+    padding: 64px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .landing .container .row .form-login .form-login__content {
+    width: 484px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .landing .container .row .form-login .form-login__content {
+    position: absolute;
+    top: calc(50% - 313px);
+  }
+}
+.landing .container .row .form-login .form-login__content .rocket {
+  position: absolute;
+  top: -68px;
+  left: -80px;
+}
+.landing .container .row .form-login .form-login__content h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+  text-align: center;
+  color: #3e3f5e;
+}
+.landing .container .row .form-login .form-login__content form {
+  margin-top: 76px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.landing .container .row .form-login .form-login__content form .login-username,
+.landing .container .row .form-login .form-login__content form .password {
+  position: relative;
+}
+.landing .container .row .form-login .form-login__content form .login-username input,
+.landing .container .row .form-login .form-login__content form .password input {
+  width: 100%;
+  border-radius: 12px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 18px;
+  height: 54px;
+  line-height: 0 18px;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color 0.2s ease-in-out;
+}
+.landing .container .row .form-login .form-login__content form .login-username input:is(:focus, :valid), .landing .container .row .form-login .form-login__content form .login-username input#register-email:not(:placeholder-shown),
+.landing .container .row .form-login .form-login__content form .password input:is(:focus, :valid),
+.landing .container .row .form-login .form-login__content form .password input#register-email:not(:placeholder-shown) {
+  border-color: #615dfa;
+}
+.landing .container .row .form-login .form-login__content form .login-username input:is(:focus, :valid) ~ label, .landing .container .row .form-login .form-login__content form .login-username input#register-email:not(:placeholder-shown) ~ label,
+.landing .container .row .form-login .form-login__content form .password input:is(:focus, :valid) ~ label,
+.landing .container .row .form-login .form-login__content form .password input#register-email:not(:placeholder-shown) ~ label {
+  top: -6px;
+  left: 12px;
+  background-color: #fff;
+  font-size: 0.75rem;
+  padding: 0 6px;
+}
+.landing .container .row .form-login .form-login__content form .login-username label,
+.landing .container .row .form-login .form-login__content form .password label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #adafca;
+  font-size: 1rem;
+  line-height: 1em;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting input:checked ~ .check-box {
+  background-color: #23d2e2;
+  border-color: #23d2e2;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting input:checked ~ .check-box img {
+  fill: #fff;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting .check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid #dedeea;
+  border-radius: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting .check-box img {
+  fill: transparent;
+  transition: fill 0.2s ease-in-out;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting label {
+  padding-left: 34px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 22px;
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+  .landing .container .row .form-login .form-login__content form .remember-forgetting label {
+    cursor: pointer;
+  }
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting .forgetting {
+  line-height: 1.5;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting .forgetting a {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 22px;
+  font-family: "Rajdhani", sans-serif;
+  text-align: left;
+}
+.landing .container .row .form-login .form-login__content form .remember-forgetting .forgetting a:hover {
+  color: #00c7d9;
+}
+.landing .container .row .form-login .form-login__content form .form-btn-login button {
+  width: 100%;
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 54px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+.landing .container .row .form-login .form-login__content form .form-btn-login button {
+  background-color: #615dfa;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+}
+.landing .container .row .form-login .form-login__content p {
+  margin-top: 40px;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+}
+.landing .container .row .form-login .form-login__content p::before, .landing .container .row .form-login .form-login__content p::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #eaeaf5;
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+.landing .container .row .form-login .form-login__content p::before {
+  left: 0;
+}
+.landing .container .row .form-login .form-login__content .social-list {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.landing .container .row .form-login .form-login__content .social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.landing .container .row .form-login .form-login__content .social-list li a:hover {
+  transform: translateY(-4px);
+}
+.landing .container .row .form-login .form-login__content .social-list li a.fb {
+  margin-right: 12px;
+  background-color: #3763d2;
+}
+.landing .container .row .form-login .form-login__content .social-list li a.twitter {
+  margin-right: 12px;
+  background-color: #1abcff;
+}
+.landing .container .row .form-login .form-login__content .social-list li a.twitch {
+  margin-right: 12px;
+  background-color: #7b5dfa;
+}
+.landing .container .row .form-login .form-login__content .social-list li a.youtobe {
+  margin-right: 0;
+  background-color: #fd434f;
+}
+.landing .container .row .form-login .form-login__content .social-list li a img {
+  width: 12px;
+  height: 12px;
+  color: #fff;
+}
+.landing .container .row .form-register {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .form-register {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .landing .container .row .form-register {
+    display: block;
+    width: 484px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 80px;
+    margin-top: 0;
+    transform: translate(50%, 0px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s ease-in-out;
+    transition-timing-function: opacity, transform, visibility;
+  }
+}
+@media screen and (min-width: 1501px) {
+  .landing .container .row .form-register {
+    right: 13%;
+  }
+}
+.landing .container .row .form-register .form-register__content {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  padding: 40px 32px;
+  background-color: #fff;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  border-radius: 12px;
+}
+@media screen and (min-width: 501px) {
+  .landing .container .row .form-register .form-register__content {
+    padding: 64px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .landing .container .row .form-register .form-register__content {
+    width: 484px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .landing .container .row .form-register .form-register__content {
+    position: absolute;
+    top: calc(50% - 370px);
+  }
+}
+.landing .container .row .form-register .form-register__content .rocket {
+  position: absolute;
+  top: -14px;
+  left: -80px;
+}
+.landing .container .row .form-register .form-register__content h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+  text-align: center;
+  color: #3e3f5e;
+}
+.landing .container .row .form-register .form-register__content form {
+  margin-top: 76px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.landing .container .row .form-register .form-register__content form .register-email,
+.landing .container .row .form-register .form-register__content form .register-username,
+.landing .container .row .form-register .form-register__content form .register-password,
+.landing .container .row .form-register .form-register__content form .repetition-password {
+  position: relative;
+}
+.landing .container .row .form-register .form-register__content form .register-email input,
+.landing .container .row .form-register .form-register__content form .register-username input,
+.landing .container .row .form-register .form-register__content form .register-password input,
+.landing .container .row .form-register .form-register__content form .repetition-password input {
+  width: 100%;
+  border-radius: 12px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 18px;
+  height: 54px;
+  line-height: 0 18px;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color 0.2s ease-in-out;
+}
+.landing .container .row .form-register .form-register__content form .register-email input:is(:focus, :valid), .landing .container .row .form-register .form-register__content form .register-email input#register-email:not(:placeholder-shown),
+.landing .container .row .form-register .form-register__content form .register-username input:is(:focus, :valid),
+.landing .container .row .form-register .form-register__content form .register-username input#register-email:not(:placeholder-shown),
+.landing .container .row .form-register .form-register__content form .register-password input:is(:focus, :valid),
+.landing .container .row .form-register .form-register__content form .register-password input#register-email:not(:placeholder-shown),
+.landing .container .row .form-register .form-register__content form .repetition-password input:is(:focus, :valid),
+.landing .container .row .form-register .form-register__content form .repetition-password input#register-email:not(:placeholder-shown) {
+  border-color: #615dfa;
+}
+.landing .container .row .form-register .form-register__content form .register-email input:is(:focus, :valid) ~ label, .landing .container .row .form-register .form-register__content form .register-email input#register-email:not(:placeholder-shown) ~ label,
+.landing .container .row .form-register .form-register__content form .register-username input:is(:focus, :valid) ~ label,
+.landing .container .row .form-register .form-register__content form .register-username input#register-email:not(:placeholder-shown) ~ label,
+.landing .container .row .form-register .form-register__content form .register-password input:is(:focus, :valid) ~ label,
+.landing .container .row .form-register .form-register__content form .register-password input#register-email:not(:placeholder-shown) ~ label,
+.landing .container .row .form-register .form-register__content form .repetition-password input:is(:focus, :valid) ~ label,
+.landing .container .row .form-register .form-register__content form .repetition-password input#register-email:not(:placeholder-shown) ~ label {
+  top: -6px;
+  left: 12px;
+  background-color: #fff;
+  font-size: 0.75rem;
+  padding: 0 6px;
+}
+.landing .container .row .form-register .form-register__content form .register-email label,
+.landing .container .row .form-register .form-register__content form .register-username label,
+.landing .container .row .form-register .form-register__content form .register-password label,
+.landing .container .row .form-register .form-register__content form .repetition-password label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #adafca;
+  font-size: 1rem;
+  line-height: 1em;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.landing .container .row .form-register .form-register__content form .alert-update {
+  position: relative;
+}
+.landing .container .row .form-register .form-register__content form .alert-update input:checked ~ .check-box {
+  background-color: #23d2e2;
+  border-color: #23d2e2;
+}
+.landing .container .row .form-register .form-register__content form .alert-update input:checked ~ .check-box img {
+  fill: #fff;
+}
+.landing .container .row .form-register .form-register__content form .alert-update .check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid #dedeea;
+  border-radius: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.landing .container .row .form-register .form-register__content form .alert-update .check-box img {
+  fill: transparent;
+  transition: fill 0.2s ease-in-out;
+}
+.landing .container .row .form-register .form-register__content form .alert-update label {
+  padding-left: 34px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 22px;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+  .landing .container .row .form-register .form-register__content form .alert-update label {
+    cursor: pointer;
+  }
+}
+.landing .container .row .form-register .form-register__content form .form-btn-register button {
+  width: 100%;
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 54px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+.landing .container .row .form-register .form-register__content form .form-btn-register button {
+  background-color: #23d2e2;
+  box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);
+}
+.landing .container .row .form-register .form-register__content .contact {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 24px;
+}
+.landing .container .row .form-register .form-register__content .contact a {
+  color: #00c7d9;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=landing.css.map */
