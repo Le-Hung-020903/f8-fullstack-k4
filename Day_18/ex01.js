@@ -1,6 +1,4 @@
 var content = `Đoạn text cần thay đổi`;
-
-// Xử lý
 content += ` `;
 var result = "";
 var oldPosition = 0;
