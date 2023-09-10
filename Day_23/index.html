@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./asset/css/reset.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Tin tức Việt Nam và quốc tế nóng</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <!--? header  -->
+            <div class="header-inner">
+                <!--? header__logo  -->
+                <div class="header__Logo">
+                    <a href="#!">
+                        <img src="./asset/images/logo_dan_tri.svg" alt="" class="logo__img">
+                    </a>
+                </div>
+                <!--? header__right -->
+                <div class="header__right">
+                    <!--? Fica -->
+                    <a href="#!" class="fica">
+                        <img src="./asset/icon/fica.jpg" alt="">
+                        Fica
+                    </a>
+                    <!--? DTiNew -->
+                    <a href="#!" class="dti">
+                        <img src="./asset/icon/DTi.png" alt="">
+                        DTiNews
+                    </a>
+                    <!--? weather -->
+                    <div class="weather">
+                        <div class="weather-content">
+                            <span class="weather-content__location">TP. HỒ CHÍ MINH</span>
+                            <span class="weather-content__date-time">Thứ 5, 07/09/2003</span>
+                        </div>
+                        <i class="fa-solid fa-cloud-sun-rain weather-content__icon"></i>
+                        <span class="weather-content__deg">34°C</span>
+                    </div>
+                    <!--? Sign in -->
+                    <div class="signin">
+                        <button class="signin__btn">
+                            <span>Đăng nhập</span>
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                    </div>
+                    <!--? Search -->
+                    <a href="#!" class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+            <!--? navigation -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link nav__icon">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">MỚI NHẤT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">VIDEO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">XÃ HỘI</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">THẾ GIỚI</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">KINH DOANH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">BẤT ĐỘNG SẢN</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">THỂ THAO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">VIỆC LÀM</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">NHÂN ÁI</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">SỨC KHỎE</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">VĂN HÓA</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">XE ++</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">SỨC MẠNH SỐ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">GIÁO DỤC</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">AN NINH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">PHÁP LUẬT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#!" class="nav__link">°°°</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--? modal sign-in register -->
+        <div class="signin-register-btn">
+            <div class="signin-register__overlay"></div>
+            <div class="signin-register__inner">
+                <div class="signin-register__nav">
+                    <button type="button" class="signin active">Đăng nhập</button>
+                    <button type="button" class="register">Đăng Ký</button>
+                </div>
+                <div class="signin-block">
+                    <div class="socials">
+                        <span class="social">với các tài khoản mạng xã hội</span>
+                        <div class="social-network">
+                            <button type="button" class="google">
+                                <img src="./asset/icon/google.svg" alt="" class="button__google">
+                                Google
+                            </button>
+                            <button type="button" class="facebook">
+                                <img src="./asset/icon/facebook.svg" alt="" class="button__facbook">
+                                facebook
+                            </button>
+                        </div>
+                        <div class="signin-line">
+                            <span>
+                                hoặc
+                            </span>
+                        </div>
+                    </div>
+                    <form action="" class="form-input-signin">
+                        <div class="form-group">
+                            <label for="email">
+                                email
+                            </label>
+                            <input type="email" class="email-input" id="email" placeholder="Email" required>
+                            <p class="invalid">Vui lòng nhập thông tin</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">
+                                password
+                            </label>
+                            <input type="password" class="password-input" id="password" placeholder="Mật khẩu" required>
+                            <i class="fa-solid fa-eye form-group__password"></i>
+                            <p class="invalid">Vui lòng nhập thông tin</p>
+
+                        </div>
+                        <div class="form-input__forget">
+                            <button type="button" class="forget-password">Quên mật khẩu?</button>
+                        </div>
+                        <div class="form-input__submit">
+                            <button type="button" class="submit-btn">Đăng nhập</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="register-block">
+                    <p class="register__desc">
+                        Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
+                    </p>
+                    <form action="" class="form-input">
+                        <div class="form-group">
+                            <label for="name">
+                                Họ và tên
+                            </label>
+                            <input type="text" id="name" placeholder="Họ và tên">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                email
+                            </label>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">
+                                password
+                            </label>
+                            <input type="password" id="password" placeholder="Mật khẩu">
+                        </div>
+                        <div class="register-confirm">
+                            Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi <a href="#!">điều kiện về qui
+                                định
+                                và chính sách của Dân trí</a>
+                        </div>
+                        <div class="form-input__submit">
+                            <button type="button" class="submit-btn">Đăng nhập</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <div class="container">
+                <section class="content-inner">
+                    <div class="content-left">
+                        <div class="content-left__column">
+                            <!--? content left 1 -->
+                            <article class="post-item">
+                                <div class="img">
+                                    <a href="#!" class="post-item__thumb">
+                                        <img src="./asset/images/img-1.webp" alt="" class="post-item__img">
+                                    </a>
+                                </div>
+                                <h3 class="post-item__heading left-heading">
+                                    Hà Nội: CSGT xử lý hàng loạt xe máy đi vào đường Vành đai 2 trên cao
+                                </h3>
+                            </article>
+
+                            <!--? content left 2 -->
+                            <article class="post-item">
+                                <div class="img">
+                                    <a href="#!" class="post-item__thumb">
+                                        <img src="./asset/images/img-2.webp" alt="" class="post-item__img">
+                                    </a>
+                                </div>
+                                <h3 class="post-item__heading left-heading">
+                                    Vụ "thâu tóm" Sông Đà 1.01 của Khánh Phương và vợ Vũ Thị Thúy
+                                </h3>
+                            </article>
+                        </div>
+                        <!--? content left 3 -->
+                        <article class="content-left__main">
+                            <div class="img">
+                                <a href="#!" class="post-item__thumb main__img">
+                                    <img src="./asset/images/img-3.webp" alt="" class="post-item__img">
+                                </a>
+                            </div>
+                            <h2 class="post-item__heading main-heading">
+                                Phòng không Ukraine khai hỏa, bắn hạ 16 UAV Nga tập kích thành phố cảng
+                            </h2>
+                            <div class="post-item__desc main-desc">
+                                Ukraine tuyên bố bắn hạ 16 máy bay không người lái của Nga tập kích thành phố cảng
+                                Odessa trong đêm.
+                            </div>
+                        </article>
+                    </div>
+                    <div class="content-right">
+                        <!--? content-right__item 1 -->
+                        <article class="post-item content-right__item">
+                            <h3 class="post-item__heading right-heading">
+                                Tổng thống Biden lên đường đến Ấn Độ, Việt Nam
+                            </h3>
+                            <div class="img">
+                                <a href="#!" class="post-item__thumb right-img">
+                                    <img src="./asset/images/img-4.webp" alt="" class="post-item__img">
+                                </a>
+                            </div>
+                        </article>
+                        <!--? content-right__item 2 -->
+                        <article class="post-item content-right__item">
+                            <h3 class="post-item__heading right-heading">
+                                Nga bắt giữ tướng phụ trách phòng không Moscow
+                            </h3>
+                            <div class="img">
+                                <a href="#!" class="post-item__thumb right-img">
+                                    <img src="./asset/images/img-5.webp" alt="" class="post-item__img">
+                                </a>
+                            </div>
+                        </article>
+                        <!--? content-right__item 3 -->
+                        <article class="post-item content-right__item">
+                            <h3 class="post-item__heading right-heading">
+                                Hà Nội: Tìm nhân chứng 2 vụ tai nạn giao thông khiến 2 người tử vong
+                            </h3>
+                            <div class="img">
+                                <a href="#!" class="post-item__thumb right-img">
+                                    <img src="./asset/images/img-4.webp" alt="" class="post-item__img">
+                                </a>
+                            </div>
+                        </article>
+                        <!--? content-right__item 4 -->
+                        <!-- <article class="content-right__item">
+                            <h3 class="post-item__heading">
+                                Tổng thống Biden lên đường đến Ấn Độ, Việt Nam
+                            </h3>
+                            <div class="img">
+                                <a href="#!" class="post-item__thumb">
+                                    <img src="./asset/images/img-4.webp" alt="" class="post-item__img">
+                                </a>
+                            </div>
+                        </article> -->
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <script src="./asset/js/index.js"></script>
+</body>
+
+</html>
