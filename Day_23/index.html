@@ -44,12 +44,8 @@
                     </div>
                     <!--? Sign in -->
                     <div class="signin">
-                        <!-- <button class="signin__btn">
+                        <button class="signin__btn">
                             <span>Đăng nhập</span>
-                            <i class="fa-regular fa-user"></i>
-                        </button> -->
-                        <button class="btn-login">
-                            Đăng nhập
                             <i class="fa-regular fa-user"></i>
                         </button>
                     </div>
@@ -122,14 +118,14 @@
             </nav>
         </div>
         <!--? modal sign-in register -->
-        <!-- <div class="signin-register-btn">
+        <div class="signin-register-btn">
             <div class="signin-register__overlay"></div>
             <div class="signin-register__inner">
                 <div class="signin-register__nav">
-                    <button type="button" class="signin active">Đăng nhập</button>
-                    <button type="button" class="register">Đăng Ký</button>
+                    <a href="#signin-block" class="active">Đăng nhập</a>
+                    <a href="#register-block">Đăng Ký</a>
                 </div>
-                <div class="signin-block">
+                <div id="signin-block" class="tab-panel active">
                     <div class="socials">
                         <span class="social">với các tài khoản mạng xã hội</span>
                         <div class="social-network">
@@ -154,7 +150,6 @@
                                 email
                             </label>
                             <input type="email" class="email-input" id="email" placeholder="Email" required>
-                            <p class="invalid">Vui lòng nhập thông tin</p>
                         </div>
                         <div class="form-group">
                             <label for="password">
@@ -162,8 +157,6 @@
                             </label>
                             <input type="password" class="password-input" id="password" placeholder="Mật khẩu" required>
                             <i class="fa-solid fa-eye form-group__password"></i>
-                            <p class="invalid">Vui lòng nhập thông tin</p>
-
                         </div>
                         <div class="form-input__forget">
                             <button type="button" class="forget-password">Quên mật khẩu?</button>
@@ -173,11 +166,11 @@
                         </div>
                     </form>
                 </div>
-                <div class="register-block">
+                <div id="register-block" class="tab-panel">
                     <p class="register__desc">
                         Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
                     </p>
-                    <form action="" class="form-input">
+                    <form action="" class="form-input-register">
                         <div class="form-group">
                             <label for="name">
                                 Họ và tên
@@ -205,106 +198,6 @@
                             <button type="button" class="submit-btn">Đăng nhập</button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div> -->
-        <div class="modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <div class="modal-tab">
-                    <button type="button" class="modal__btn modal__login">
-                        Đăng nhập
-                    </button>
-                    <button type="button" class="modal__btn modal__register">
-                        Đăng ký
-                    </button>
-                </div>
-                <div class="modal-login-register">
-                    <!-- Login -->
-                    <div class="login-content">
-                        <p class="modal__text">với các tài khoản mạng xã hội</p>
-                        <div class="modal-social">
-                            <button class="modal-social__btn google" type="button">
-                                Google
-                            </button>
-                            <button class="modal-social__btn facebook" type="button">
-                                Facebook
-                            </button>
-                        </div>
-                        <div class="modal__line">
-                            <span>hoặc</span>
-                        </div>
-                        <form action="" class="form-login" target="hidden_iframe">
-                            <div class="form-group">
-                                <label class="form__label" for="email">Email</label>
-                                <input type="email" name="email" class="form__input" id="email" placeholder="Email" />
-                                <span class="form-message err-email"></span>
-                            </div>
-                            <div class="form-group">
-                                <label class="form__label" for="password">Mật khẩu</label>
-                                <div class="form-group__wrap">
-                                    <input type="password" class="form__input" name="password" id="password"
-                                        placeholder="Mật khẩu" />
-                                    <div class="show-hide--password">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <span class="form-message err-password"></span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button class="forget-password">Quên mật khẩu?</button>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-btn submit-login">
-                                    Đăng nhập
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Register -->
-                    <div class="register-content">
-                        <p class="modal__text">
-                            Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!
-                        </p>
-                        <form action="" class="form-register" target="hidden_iframe">
-                            <div class="form-group">
-                                <label class="form__label" for="fullname">Họ và Tên</label>
-                                <input type="text" name="fullname" class="form__input" id="fullname"
-                                    placeholder="Họ và Tên" />
-                                <span class="form-message err-fullname"></span>
-                            </div>
-                            <div class="form-group">
-                                <label class="form__label" for="email">Email</label>
-                                <input type="email" name="email" class="form__input" id="email" placeholder="Email" />
-                                <span class="form-message err-email"></span>
-                            </div>
-                            <div class="form-group">
-                                <label class="form__label" for="password">Mật khẩu</label>
-                                <div class="form-group__wrap">
-                                    <input type="password" class="form__input" name="password" id="password"
-                                        placeholder="Mật khẩu" />
-                                    <div class="show-hide--password">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <span class="form-message err-password"></span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <p class="term">
-                                    Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận
-                                    mọi
-                                    <a href="#">điều kiện về qui định và chính sách của Dân trí</a>
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-btn submit-register">
-                                    Đăng kí
-                                </button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>

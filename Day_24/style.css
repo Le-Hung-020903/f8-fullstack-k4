@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+    background-color: #8758ff;
+    display: grid;
+    place-items: center;
+    font-family: "Poppins", sans-serif;
+}
+button,
+textarea,
+input,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+.app {
+    background-color: #1a1a40;
+    width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.todoForm {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.todoForm.edit {
+    margin-top: 10px;
+}
+
+.input {
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #8758ff;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+.btn {
+    background-color: #8758ff;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+.todotext {
+    margin-top: 10px;
+    color: #fff;
+    width: 318px;
+    background-color: #8758ff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.text {
+    margin: 0;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+}
