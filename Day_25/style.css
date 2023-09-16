@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+.carousel .carousel-inner {
+    display: flex;
+    transition: translate 0.4s ease;
+}
+.carousel .carousel-nav span {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.carousel .carousel-nav span.next {
+    right: 5px;
+}
+.carousel .carousel-nav span.prev {
+    left: 5px;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 12px;
+}
+.dots {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dots-active {
+    background-color: rgb(222, 192, 25);
+}
