@@ -1,0 +1,51 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td,
+th {
+    padding: 10px 20px;
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+tbody {
+    width: 100%;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+.container > h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 40%;
+    display: flex;
+    column-gap: 20px;
+}
