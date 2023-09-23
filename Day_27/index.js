@@ -1,15 +1,29 @@
-const listProduct = document.querySelector(".list-proc");
-const tbody = listProduct.querySelector("tbody");
-const cartProc = document.querySelector(".cart-proc");
-let number = 0;
-
-//Danh sách mặt hàng
+const listProduct = document.querySelector(".product");
+const productBody = listProduct.querySelector(".product tbody");
+const cartProduct = document.querySelector(".cart-product");
 const products = [
-    { id: 1, name: "Sản phẩm 1", price: 1000 },
-    { id: 2, name: "Sản phẩm 2", price: 2000 },
-    { id: 3, name: "Sản phẩm 3", price: 3000 },
-    { id: 4, name: "Sản phẩm 4", price: 4000 },
+    {
+        id: 1,
+        name: "Sản phẩm 1",
+        price: 1000,
+    },
+    {
+        id: 2,
+        name: "Sản phẩm 2",
+        price: 2000,
+    },
+    {
+        id: 3,
+        name: "Sản phẩm 3",
+        price: 3000,
+    },
+    {
+        id: 4,
+        name: "Sản phẩm 4",
+        price: 4000,
+    },
 ];
+let number = 0;
 const resetProductsInput = function () {
     const ProcNumber = listProduct.querySelectorAll(`input[type = "number" `);
     ProcNumber.forEach((number) => {
@@ -45,7 +59,6 @@ const showProduct = function () {
     });
 };
 showProduct();
-//constructor Product
 const Product = function (id, name, price, number) {
     this.id = id;
     this.name = name;
@@ -191,12 +204,12 @@ Update shopping cart</button>
 delete cart</button>
     </div>
     `;
-    cartProc.innerHTML = html;
+    cartProduct.innerHTML = html;
 };
 const updateCartTable = function () {
     if (cartProducts.length === 0) {
         let html = `<p>There are no items in the cart</p>`;
-        cartProc.innerHTML = html;
+        cartProduct.innerHTML = html;
     } else {
         showCartTable();
         deleteAProc();
