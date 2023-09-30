@@ -69,58 +69,29 @@ body {
     display: none;
     text-align: center;
 }
-.singKaraoke .play {
-    border: none;
-    text-align: center;
-    display: block;
-    margin: 30px auto;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: blueviolet;
-}
-.singKaraoke .inner {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    background: blueviolet;
-    top: 100%;
-    transition: top 0.4s ease;
-}
-.singKaraoke .inner.show {
-    top: 0;
-}
-.inner-title {
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 30px;
-    color: #fff;
-}
-.inner-title .close {
-    cursor: pointer;
-}
-.inner-lyric {
-    color: #fff;
-    font-size: 40px;
+.karaoke {
     height: 80vh;
-    font-weight: bold;
+    background-color: blueviolet;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    font-weight: bold;
+    font-size: 20px;
+}
+.karaoke .karaoke-content {
     text-align: center;
 }
-.inner-lyric .word {
+.karaoke .karaoke-content p {
+    margin: 10px 0;
+}
+.karaoke .karaoke-content .word {
     position: relative;
 }
-.inner-lyric .word span {
+.karaoke .karaoke-content .word span {
     position: absolute;
-    top: 0;
     left: 0;
-    width: 0;
     overflow: hidden;
-    display: inline-block;
-    color: rgb(87, 87, 32);
+    width: 0;
+    color: yellow;
 }

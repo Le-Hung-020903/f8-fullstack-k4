@@ -68,7 +68,6 @@ document.addEventListener("mouseup", function (e) {
         audio.currentTime = time;
     }
 });
-
 audio.addEventListener("loadeddata", function () {
     durationTimeEl.innerText = getTime(audio.duration);
 });
@@ -89,7 +88,7 @@ audio.addEventListener("timeupdate", function () {
         value = (100 * audio.currentTime) / audio.duration;
         progress.style.width = `${value}%`;
         currentTimeEl.innerText = getTime(audio.currentTime);
-        handleKaraoke(audio.currentTime);
+        // handleKaraoke(audio.currentTime);
     }
 });
 
@@ -2787,54 +2786,100 @@ var lyric = `{
   },
   "timestamp": 1695722729082
 }`;
-var song = `<p>Ngày mai người ta lấy chồng</p>
-<p>Ca sỹ: Thành Đạt</p>`;
-lyric = JSON.parse(lyric).data.sentences;
-var btnPlay = document.querySelector(".play");
-var karaoke = document.querySelector(".inner");
-var close = document.querySelector(".close");
-var innerLyric = document.querySelector(".inner-lyric");
-btnPlay.addEventListener("click", function () {
-    karaoke.classList.add("show");
-    innerLyric.innerHTML = song;
-});
-close.addEventListener("click", function () {
-    karaoke.classList.remove("show");
-    innerLyric.innerHTML = "";
-});
-var number = 2;
-var handleKaraoke = function (currentTime) {
-    currentTime *= 1000;
-    var index = lyric.findIndex((wordItem) => {
-        var wordItemArr = wordItem.words;
+lyric = JSON.parse(lyric);
+lyric = lyric.data.sentences;
+var karaokeContent = document.querySelector(".karaoke-content");
+var currentIndex;
+var handleKaraoke = function () {
+    var currentTime = audio.currentTime * 1000;
+    var index = lyric.findIndex(function (sentence) {
+        var words = sentence.words;
         return (
-            currentTime >= wordItemArr[0].startTime &&
-            currentTime <= wordItemArr[wordItemArr.length - 1].endTime
+            currentTime >= words[0].startTime &&
+            currentTime <= words[words.length - 1].endTime
         );
     });
 
-    if (index !== -1) {
-        var innerLyric = document.querySelector(".inner-lyric");
-        innerLyric.innerText = "";
-        var page = Math.floor(index / number + 1);
-        var offset = (page - 1) * number;
-        if (index >= offset && index < offset + number) {
-            var div = document.createElement("div");
-            for (var i = offset; i < offset + number; i++) {
-                var p = document.createElement("p");
-                lyric[i].words.forEach(function (word) {
-                    var wordEl = document.createElement("span");
-                    wordEl.classList.add("word");
-                    wordEl.innerText = word.data + " ";
-
-                    var span = document.createElement("span");
-                    span.innerText = word.data;
-                    wordEl.append(span);
-                    p.append(wordEl);
-                });
-                div.append(p);
-            }
-            innerLyric.append(div);
+    if (index !== -1 && currentIndex !== index) {
+        if (index === 0) {
+            //Khi bắt đầu hát
+            var sentenceHtml = `
+      <p>${getSentence(0)}</p>
+      <p>${getSentence(1)}</p>
+      `;
+            karaokeContent.innerHTML = sentenceHtml;
+        } else {
+            nextSentence(index);
         }
+        currentIndex = index;
+    }
+    requestId = requestAnimationFrame(handleKaraoke);
+};
+var handlePaintColor = function (currentTime) {
+    var wordEl = karaokeContent.querySelectorAll(".word");
+    if (wordEl.length) {
+        wordEl.forEach(function (wordItem, index) {
+            var startTime = wordItem.dataset.startTime;
+            var endTime = wordItem.dataset.endTime;
+
+            if (currentTime > startTime && currentTime < endTime) {
+                var rate =
+                    ((currentTime - startTime) / (endTime - startTime)) * 100;
+                wordItem.children[0].style.width = `${rate}%`;
+                if (
+                    index > 0 &&
+                    currentTime >= wordEl[index - 1].dataset.endTime
+                ) {
+                    wordEl[index - 1].children[0].style.width = `100%`;
+                }
+            }
+        });
     }
 };
+
+var nextSentence = function (index) {
+    var lines = karaokeContent.children;
+    if (index % 2 !== 0) {
+        lines[0].style.transition = `opacity 0.4s linear`;
+        lines[0].style.opacity = 0;
+
+        setTimeout(function () {
+            lines[0].style.opacity = 1;
+            lines[0].innerHTML = getSentence(index + 1);
+        }, 400);
+    } else {
+        lines[1].style.transition = `opacity 0.4s linear`;
+        lines[1].style.opacity = 0;
+
+        setTimeout(function () {
+            lines[1].style.opacity = 1;
+            lines[1].innerHTML = getSentence(index + 1);
+        }, 400);
+    }
+};
+
+var getSentence = function (index) {
+    var words = lyric[index].words;
+    var sentence = words
+        .map(function (word) {
+            return `<span class="word" data-start-time="${word.startTime}" data-end-time="${word.endTime}">${word.data}<span>${word.data}</span></span>`;
+        })
+        .join(" ");
+    return sentence;
+};
+var requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame;
+
+var cancelAnimationFrame =
+    window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+var requestId;
+audio.addEventListener("play", function () {
+    requestId = requestAnimationFrame(handleKaraoke);
+});
+audio.addEventListener("pause", function () {
+    cancelAnimationFrame(requestId);
+});
