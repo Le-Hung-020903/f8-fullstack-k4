@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Doc Editor</h4>
+        <div class="row">
+            <div class="main-controls">
+                <div class="dropdown">
+                    <button class="btn">
+                        File
+                    </button>
+                    <div class="dropdown-menu">
+                        <button id="new-btn" class="dropitem">New</button>
+                        <button id="txt-btn" class="dropitem">Save as TXT</button>
+                        <button id="pdf-btn" class="dropitem">Save as PDF</button>
+                    </div>
+                </div>
+                <input type="text" name="" value="untitled" id="" class="name">
+            </div>
+            <div class="btn-controls">
+                <button class="btn-dark" id="btn-bold">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button class="btn-dark" id="btn-underline">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+                <button class="btn-dark" id="btn-italic">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <input type="color" class="btn-color" id="btn-color">
+            </div>
+        </div>
+        <div class="text-content" contenteditable="true" spellcheck="false"></div>
+        <p class="count-letters">
+            <span class="count-letter">Số ký tự: </span>
+            <span class="count-word">Số từ: </span>
+        </p>
+    </div>
+    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+
+</html>
