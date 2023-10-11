@@ -246,6 +246,7 @@ button {
     padding: 12px 16px 10px;
     outline: none;
     border: 1px solid #ddd;
+    margin-bottom: 5px;
 }
 input[type="password"] {
     position: relative;
@@ -264,6 +265,7 @@ input[type="password"] {
 .form-input__forget {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 16px;
 }
 
 .forget-password {
@@ -272,9 +274,6 @@ input[type="password"] {
     background: transparent;
     font-size: 1.4rem;
     color: gray;
-    margin-top: 16px;
-}
-.form-input__submit {
     margin-top: 16px;
 }
 
@@ -291,21 +290,12 @@ input[type="password"] {
     border-radius: 5px;
     font-weight: 600;
 }
-.d-none {
-    display: none;
-}
-.d-block {
-    display: block;
-}
-.invalid {
+.form-input-signin .form-group .error {
     color: red;
-    font-size: 1.6rem;
-    margin: 5px;
     font-style: italic;
-    display: none;
 }
-.border-invalid {
-    border: 1px solid red !important;
+.form-input-signin [class*="error-"] input {
+    border-color: red;
 }
 /* ------------ register-btn ------------ */
 .register__desc {
