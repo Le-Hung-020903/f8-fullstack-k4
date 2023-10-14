@@ -145,19 +145,24 @@
                         </div>
                     </div>
                     <form action="" class="form-input-signin">
+                        <div class="message"></div>
                         <div class="form-group">
                             <label for="email-input">
                                 email
                             </label>
-                            <input type="email" class="email-input" id="email-input" placeholder="Email">
+                            <input type="email" class="filed-item email" id="email-input" placeholder="Email">
                             <span class="error"></span>
                         </div>
                         <div class="form-group">
                             <label for="password-input">
                                 password
                             </label>
-                            <input type="password" class="password-input" id="password-input" placeholder="Mật khẩu">
-                            <i class="fa-solid fa-eye form-group__password"></i>
+                            <input type="password" class="filed-item password" id="password-input"
+                                placeholder="Mật khẩu">
+                            <span class="show-hide-password hide">
+                                <i class="fa-solid fa-eye form-group__password"></i>
+                                <i class="fa-regular fa-eye-slash form-group__password"></i>
+                            </span>
                             <span class="error"></span>
                         </div>
                         <div class="form-input__forget">

@@ -294,8 +294,20 @@ input[type="password"] {
     color: red;
     font-style: italic;
 }
-.form-input-signin [class*="error-"] input {
+.form-input-signin .has-error .filed-item {
     border-color: red;
+}
+.form-input-signin .message {
+    color: red;
+}
+.show-hide-password i:first-child {
+    display: none;
+}
+.show-hide-password.hide i:first-child {
+    display: block;
+}
+.show-hide-password.hide i + i {
+    display: none;
 }
 /* ------------ register-btn ------------ */
 .register__desc {
