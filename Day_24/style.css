@@ -12,65 +12,72 @@ select {
     font-family: inherit;
     font-size: inherit;
 }
-.app {
-    background-color: #1a1a40;
-    width: 400px;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.heading {
+.App {
     text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #fff;
-}
-.todoForm {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
 }
 
-.todoForm.edit {
-    margin-top: 10px;
-}
-
-.input {
-    width: 250px;
-    height: 20px;
-    padding: 10px;
-    border: 1px solid #8758ff;
-    outline: none;
-    background-color: transparent;
-    color: #fff;
-}
-.btn {
-    background-color: #8758ff;
-    border: none;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
-}
-.todotext {
-    margin-top: 10px;
-    color: #fff;
-    width: 318px;
-    background-color: #8758ff;
+.TodoWrapper {
+    background: #1a1a40;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    margin-top: 5rem;
+    padding: 2rem;
 }
-.text {
-    margin: 0;
+h1 {
+    color: #fff;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
 }
-.icon {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
+.TodoForm {
+    width: 100%;
+}
+.todo-input::placeholder {
+    color: #ffffff4d;
+}
+.todo-input {
+    outline: none;
+    background: none;
+    border: 1px solid #8758ff;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #fff;
+}
+.todo-btn {
+    background: #8758ff;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
     cursor: pointer;
+}
+
+.Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8758ff;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.Todo p {
+    color: #fff;
+    cursor: pointer;
+}
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+}
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+.completed {
+    color: #c5aeff;
+    text-decoration: line-through;
 }

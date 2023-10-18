@@ -23,7 +23,7 @@ recognition.onresult = (e) => {
     msgStart.classList.add("d-none");
     let text = e.results[0][0].transcript.toLowerCase();
     results.innerText = `Đang tìm kiếm ${text}`;
-
+    console.log(`Đang tìm kiếm ${text}`);
     switch (text) {
         case "google":
             window.open("https://www.google.com", "_blank");
@@ -37,6 +37,11 @@ recognition.onresult = (e) => {
             break;
         case "youtube":
             window.open("https://www.youtube.com", "_blank");
+            msgSuccess.classList.remove("d-none");
+            results.innerText = `Đã thực hiện xong`;
+            break;
+        case "zing":
+            window.open("https://zingmp3.vn", "_blank");
             msgSuccess.classList.remove("d-none");
             results.innerText = `Đã thực hiện xong`;
             break;
