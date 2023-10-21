@@ -8,7 +8,9 @@ const renderTodos = function () {
     const html = todos
         .map((todo, index) => {
             return `<div class="Todo" data-index= "${index}">
-                <p class="${todo.completed ? "completed" : ""}">${todo.name}</p>
+                <p data-type="completed" class="${
+                    todo.completed ? "completed" : ""
+                }">${todo.name}</p>
                 <div>
                         <svg data-type="edit" aria-hidden="true" focusable="false" data-prefix="fas"
                             data-icon="pen-to-square" class="svg-inline--fa fa-pen-to-square " role="img"
@@ -30,9 +32,17 @@ const renderTodos = function () {
         .join("");
     todoList.innerHTML = html;
 };
-const handleRemove = function () {
-    console.log();
+const handleRemove = function (index) {
+    if (confirm("Are you sure delete?")) {
+        todos.splice(index, 1);
+        renderTodos();
+    }
 };
+const handleCompleted = function (index) {
+    todos[index].completed = !todos[index].completed;
+    renderTodos();
+};
+
 todoForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const nameEL = this.querySelector(".todo-input");
@@ -59,10 +69,15 @@ todoList.addEventListener("click", function (e) {
         type = e.target.dataset.type;
         todoEl = e.target.parentElement.parentElement;
     }
+    let index = todoEl.dataset.index;
     if (type === "edit") {
     }
     if (type === "remove") {
-        console.log(todoEl);
-        handleRemove();
+        handleRemove(index);
+    }
+    if (type === "completed") {
+        todoEl = e.target.parentElement;
+        index = todoEl.dataset.index;
+        handleCompleted(index);
     }
 });
