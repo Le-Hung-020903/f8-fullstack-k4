@@ -10,159 +10,192 @@ body {
     text-align: center;
     margin: 0 auto;
 }
-
-.title {
-    margin: 30px;
+input,
+select,
+textarea,
+button {
+    font-size: inherit;
+}
+.root {
+    width: 700px;
+    margin: 50px auto 0;
+}
+.h1 {
+    color: black;
+}
+.hightlight {
     color: transparent;
     background: linear-gradient(to right, #03d190, #116ee0);
     -webkit-background-clip: text;
     background-clip: text;
 }
-.span {
-    color: black;
-}
 
-.search {
-    display: flex;
-    justify-content: center;
-}
-.search .search-todos {
-    position: relative;
-    width: 35%;
-}
-.search .search-todos input {
-    padding: 16px 15px;
+.form-group {
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-.search .search-todos button {
-    position: absolute;
-    top: 6px;
-    right: 9px;
-    padding: 11px 18px;
-    border-radius: 5px;
-    border: none;
-    background-color: #1c4ed8;
-    cursor: pointer;
-}
-.search .search-todos button > i {
-    color: #fff;
-}
-.search .search-todos button:hover {
-    background-color: #052d9b;
-}
-.search .search-btn {
-    margin-left: 10px;
-    padding: 4px 6px;
-}
-.search .search-btn .search-btn__add {
-    padding: 13px 18px;
-    background: #047857;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-}
-.search .search-btn .search-btn__add:hover {
-    background-color: #024e39;
-}
-
-.list {
-    margin: 20px auto;
-    width: 42%;
-    background: #fff;
-    position: relative;
-}
-.list .add-list {
+    margin-top: 30px;
     display: flex;
-    padding: 14px 12px;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 10px;
-    color: #6e6c6c;
-    margin: 20px 0;
+    justify-content: space-around;
+    column-gap: 30px;
 }
-.list .click-list button {
-    padding: 12px 14px;
-    margin: 0 6px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
+.form-group label {
+    position: relative;
+    outline: none;
+    display: flex;
+    flex: 1;
+    border-radius: 5px;
 }
-.list .click-list .delete {
-    background-color: red;
-}
-.list .click-list .note {
-    background-color: #1d4ed8;
-}
-.list .click-list .change {
-    background-color: #9ca3af;
-}
-
-.complateTodos {
+.form-group label i {
     position: absolute;
-    bottom: -60px;
-}
-.complateTodos > button {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(29, 78, 216);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    border: none;
-    padding: 14px 16px;
-    background-color: #9ca3af;
-    color: white;
+}
+.form-group label input {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 15px;
+    border: 1px solid #d1d5db;
     border-radius: 8px;
 }
-
-.model-box {
-    display: none;
-    background: rgba(0, 0, 0, 0.6117647059);
+.form-group button {
+    color: #fff;
+    background-color: rgb(4, 120, 87);
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition: 0.3s ease;
+}
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-overlay {
+    background-color: rgba(55, 65, 81, 0.6);
     position: fixed;
     inset: 0;
 }
-.model-box.show {
-    display: block;
-}
-.model-box .modal {
-    max-width: 400px;
-    margin: 100px auto;
-    background: #fff;
-    padding: 15px 15px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-}
-.model-box .modal .modal-header > input {
-    width: 100%;
-    padding: 12px 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #f9fafb;
-}
-.model-box .modal .modal-header::after {
-    content: "";
-    position: absolute;
-    bottom: 61px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-}
-.model-box .modal .modal-btn {
-    margin-top: 26px;
-}
-.model-box .modal .modal-btn button {
-    padding: 10px 14px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
+.modal-body {
+    width: 400px;
+    background-color: #fff;
     border-radius: 6px;
-    border: none;
+    z-index: 999;
+}
+.modal-body .modal-input {
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+.modal-body .modal-input input {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+.modal-body .modal-cta {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.modal-cta button:nth-child(1) {
+    padding: 11px;
+    background-color: rgb(4, 120, 87);
+    outline: none;
+    border: 1px solid gray;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
 }
-.model-box .modal .modal-btn .save-btn {
-    background: #047857;
+.modal-cta button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.completed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3px;
+    margin-top: 25px;
+    text-align: center;
     color: #fff;
+    padding: 15px 5px;
+    border-radius: 8px;
+    width: 200px;
+    cursor: pointer;
+    /* background-color: rgb(4, 120, 87); */
+    background-color: rgb(156, 163, 175);
+    transition: background-color 0.3s linear;
+}
+.completed:hover {
+    background-color: rgb(99, 102, 108);
+}
+.completed .arrow-right path {
+    fill: #fff;
+}
+.todos {
+    margin-top: 20px;
+}
+.todos .todo-item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1),
+        0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.todos .todo-icon {
+    display: flex;
+    column-gap: 30px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+.todos .todo-icon .trash {
+    background-color: rgb(190, 18, 60);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.todos .todo-icon .edit {
+    background-color: rgb(29, 78, 216);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.todos .todo-icon .todo-completed {
+    background-color: rgb(156, 163, 175);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -10,41 +10,35 @@
 </head>
 
 <body>
-  <main id="root">
-    <div class="title">
-      <h1><span class="title-color">Smatyx</span>Todos App</h1>
-    </div>
-    <div class="search">
-      <div class="search-todos">
-        <input type="text" placeholder="Search Todos" />
-        <button>
+  <div class="container">
+    <div class="root">
+      <h1><span class="hightlight">Smatyx</span> Todos App</h1>
+      <div class="form-group">
+        <label for="search">
+          <input type="text" placeholder="Search Todos" id="search">
           <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        </label>
+        <button class="add-todos" type="button">Add Todos</button>
       </div>
-      <div class="search-btn">
-        <button class="search-btn__add">Add Todos</button>
-      </div>
+      <div class="todos"></div>
     </div>
-    <div class="list">
-      <div class="complateTodos">
-        <button>
-          Completed Todos 1 <i class="fa-solid fa-circle-right"></i>
-        </button>
-      </div>
-    </div>
-    <div class="model-box">
-      <div class="modal">
-        <div class="modal-header">
-          <input type="text" placeholder="Add Todos" />
-          <div class="modal-btn">
-            <button class="save-btn">Save</button>
-            <button class="close">Cancel</button>
+    <div class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-body">
+        <form>
+          <div class="modal-input">
+            <input type="text" name="" id="" placeholder="Add Todos">
           </div>
-        </div>
+          <div class="modal-cta">
+            <button type="button">Save</button>
+            <button class="cancel" type="button">Cancel</button>
+          </div>
+        </form>
       </div>
     </div>
-  </main>
+  </div>
   <script type="module" src="./js/app.js"></script>
+  <script src="./js/edit.js"></script>
 </body>
 
 </html>
