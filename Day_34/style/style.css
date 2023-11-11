@@ -82,15 +82,15 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
     transition-property: opacity, visibility;
     transition: 0.3s ease;
 }
-.modal.show {
+/* .modal.show {
     opacity: 1;
     visibility: visible;
-}
+} */
 .modal-overlay {
     background-color: rgba(55, 65, 81, 0.6);
     position: fixed;
@@ -148,21 +148,31 @@ button {
     padding: 15px 5px;
     border-radius: 8px;
     width: 200px;
-    cursor: pointer;
     /* background-color: rgb(4, 120, 87); */
     background-color: rgb(156, 163, 175);
     transition: background-color 0.3s linear;
+    cursor: pointer;
 }
-.completed:hover {
+/* .completed:hover {
     background-color: rgb(99, 102, 108);
+} */
+.completed .arrow-right {
+    transition-property: rotate;
+    transition: 0.3s ease;
 }
 .completed .arrow-right path {
     fill: #fff;
 }
+.rotate {
+    transform: rotate(90deg);
+}
+.focus {
+    background-color: rgb(4, 120, 87);
+}
 .todos {
     margin-top: 20px;
 }
-.todos .todo-item {
+.todo-item {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -173,29 +183,32 @@ button {
     padding: 15px 10px;
 }
 
-.todos .todo-icon {
+.todo-icon {
     display: flex;
     column-gap: 30px;
     font-size: 15px;
     color: #fff;
     text-align: center;
 }
-.todos .todo-icon .trash {
+.todo-icon .trash {
     background-color: rgb(190, 18, 60);
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
-.todos .todo-icon .edit {
+.todo-icon .edit {
     background-color: rgb(29, 78, 216);
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
-.todos .todo-icon .todo-completed {
+.todo-icon .todo-completed {
     background-color: rgb(156, 163, 175);
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
     cursor: pointer;
+}
+.icon-completed {
+    background-color: #03d190 !important;
 }

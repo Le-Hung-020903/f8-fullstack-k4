@@ -1,19 +1,25 @@
-import { config } from "./config.js";
-const { SERVER_API } = config;
+import { Config } from "./config";
 
-export const client = {
+const { SERVER_API } = Config;
+
+export const Client = {
     serverApi: SERVER_API,
+    apiKey: null,
+
     setUrl: function (url) {
         this.serverApi = url;
     },
-    setToken: function (token) {
-        this.token = token;
+    setApiKey: function (apiKey) {
+        this.apiKey = apiKey;
     },
     send: async function (url, method = "GET", body = null) {
         url = `${this.serverApi}${url}`;
         const headers = {
             "Content-Type": "application/json",
         };
+        if (this.apiKey) {
+            headers["X-Api-Key"] = this.apiKey;
+        }
         const options = {
             method,
             headers,
@@ -26,23 +32,22 @@ export const client = {
         return { response, data };
     },
 
-    //http get
     get: function (url) {
         return this.send(url);
     },
-    //http post
+
     post: function (url, body) {
         return this.send(url, "POST", body);
     },
-    //http put
+
     put: function (url, body) {
         return this.send(url, "PUT", body);
     },
-    //http patch
+
     patch: function (url, body) {
         return this.send(url, "PATCH", body);
     },
-    //http delete
+
     delete: function (url) {
         return this.send(url, "DELETE");
     },
