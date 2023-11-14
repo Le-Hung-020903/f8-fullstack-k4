@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Add from "./Add";
 import TodoList from "./todoList";
 import Login from "./Login";
+import Search from "./Search";
 import Cookies from "js-cookie";
 import alertify from "alertifyjs";
 import { Client } from "../api/Client";
@@ -30,6 +31,7 @@ export default class Body extends Component {
             },
             error: "Hãy nhập email để thêm công việc vào TodoList",
             inputText: "",
+            isSearch: false,
         };
     }
     handleSetState = (callback) => {
@@ -40,7 +42,11 @@ export default class Body extends Component {
             isLogin: boolean,
         });
     };
-
+    handleToggleSearch = (boolean) => {
+        this.setState({
+            isSearch: boolean,
+        });
+    };
     componentDidMount = () => {
         if (this.state.apiKeyCookie && this.state.usersEmailCookie) {
             alertify.success(this.state.success(Cookies.get("userEmail")));
@@ -72,6 +78,15 @@ export default class Body extends Component {
                                 handleLoading={this.props.handleLoading}
                                 handleSetState={this.handleSetState}
                                 isLogin={this.state.isLogin}
+                                isSearch={this.state.isSearch}
+                            />
+                            <Search
+                                isLogin={this.state.isLogin}
+                                handleToggleSearch={this.handleToggleSearch}
+                                isSearch={this.state.isSearch}
+                                inputText={this.state.inputText}
+                                handleLoading={this.props.handleLoading}
+                                handleSetState={this.handleSetState}
                             />
                         </div>
 

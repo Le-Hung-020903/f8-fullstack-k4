@@ -229,7 +229,7 @@ export default class TodoList extends Component {
                         <div className="input-box">
                             <input
                                 type="text"
-                                value="Không có dữ liệu."
+                                value="Không tìm thấy kết quả bạn mong muốn"
                                 readOnly
                             />
                         </div>
@@ -239,4 +239,3 @@ export default class TodoList extends Component {
         );
     }
 }
-
