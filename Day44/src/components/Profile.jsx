@@ -19,9 +19,8 @@ const Profile = () => {
     const sendEmail = (e) => {
         e.preventDefault();
         setLoading(true);
-        const serviceId = "service_9ur0sgd";
-        const templateID = "template_2r7qiuk";
-        const publicKey = "lCBcfxcJ7igiZCkFw";
+        // const serviceId = import.meta.env.serviceId;
+        // const templeteId =
         const templePagram = {
             fromEmail: user.email,
             fromName: user.name,

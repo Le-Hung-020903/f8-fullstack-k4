@@ -5,7 +5,6 @@ import Profile from "./Profile";
 import Loading from "./Loading";
 const Main = () => {
     const { loginWithPopup, isAuthenticated, isLoading } = useAuth0();
-    // const [loading, setLoading] = useState();
     if (isLoading) {
         return (
             <>
