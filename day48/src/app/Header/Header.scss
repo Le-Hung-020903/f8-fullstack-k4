@@ -1,0 +1,109 @@
+.dark .container {
+    background-color: #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: background-color 0.3s ease;
+
+    .header-right {
+        .facebook,
+        .youtube,
+        .theme,
+        .language {
+            background-color: #eee9e9 !important;
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+.container {
+    background-color: #79c3de;
+    padding: 10px;
+    font-weight: 600;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .header-inner {
+        width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            .logo {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+            }
+            .facebook {
+                width: 40px;
+                height: 40px;
+                background-color: #fff;
+                // border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                transition: all 1s;
+                &:after,
+                &:before {
+                    content: " ";
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    border: 0px solid #fff;
+                    transition: all 1s;
+                }
+                &:after {
+                    top: -1px;
+                    left: -1px;
+                    border-top: 2px solid black;
+                    border-left: 2px solid black;
+                }
+                &:before {
+                    bottom: -1px;
+                    right: -1px;
+                    border-bottom: 2px solid black;
+                    border-right: 2px solid black;
+                }
+                &:hover {
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    // background:rgba(0,0,0,.5);
+                    // color:white;
+                    &:before,
+                    &:after {
+                        width: 100%;
+                        height: 100%;
+                        // border-color:white;
+                    }
+                }
+            }
+            .youtube,
+            .theme,
+            .language {
+                @extend .facebook;
+            }
+            .theme,
+            .language {
+                border: none;
+            }
+        }
+    }
+}
