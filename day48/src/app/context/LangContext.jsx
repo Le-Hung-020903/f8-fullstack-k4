@@ -1,5 +1,4 @@
 "use client";
-
 import en from "@/app/translate/en.json";
 import vi from "@/app/translate/vi.json";
 
@@ -7,12 +6,18 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const LangContext = createContext();
 
-const initialLang = localStorage.getItem("lang") ?? "vi";
-const initialTheme = localStorage.getItem("theme") ?? "light";
-
 export const LangProvider = ({ children }) => {
-    const [lang, setLang] = useState(initialLang);
-    const [theme, setTheme] = useState(initialTheme);
+    const themeLocal =
+        typeof window !== "undefined"
+            ? localStorage.getItem("theme") ?? "light"
+            : "not support";
+    const langLocal =
+        typeof window !== "undefined"
+            ? localStorage.getItem("lang") ?? "vi"
+            : "not support";
+    console.log({ themeLocal, langLocal });
+    const [lang, setLang] = useState(langLocal);
+    const [theme, setTheme] = useState(themeLocal);
 
     const changeLang = () => {
         const newLang = lang === "vi" ? "en" : "vi";
@@ -22,9 +27,9 @@ export const LangProvider = ({ children }) => {
 
     const translate = (key) => {
         if (lang === "vi") {
-            return vi[key] ?? key;
+            return vi[key];
         } else {
-            return en[key] ?? key;
+            return en[key];
         }
     };
 
