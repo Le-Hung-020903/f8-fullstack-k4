@@ -6,11 +6,12 @@ import { FaYoutube } from "react-icons/fa";
 import { GoSun } from "react-icons/go";
 import { FaMoon } from "react-icons/fa";
 
-import "../../assets/reset.css";
+import "../../../assets/reset.css";
 import "./Header.scss";
-import img1 from "../../assets/images/img1.webp";
+import img1 from "../../../assets/images/img1.webp";
 import Image from "next/image";
 import { useLang } from "@/context/LangContext";
+
 const Header = () => {
     const { lang, changeLang, theme, changeTheme } = useLang();
 

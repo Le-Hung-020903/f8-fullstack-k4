@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Header from "./Header/page";
+import Header from "./components/Header/Header";
 import "@/assets/reset.css";
 import Siderbar from "./Main/page";
 import { LangProvider } from "@/context/LangContext";
