@@ -10,7 +10,7 @@ import "../../../assets/reset.css";
 import "./Header.scss";
 import img1 from "../../../assets/images/img1.webp";
 import Image from "next/image";
-import { useLang } from "@/context/LangContext";
+import { useLang } from "@/app/context/LangContext";
 
 const Header = () => {
     const { lang, changeLang, theme, changeTheme } = useLang();

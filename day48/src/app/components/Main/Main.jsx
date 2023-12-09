@@ -6,7 +6,8 @@ import Link from "next/link";
 import "../../../assets/reset.css";
 import "./Main.scss";
 import img1 from "../../../assets/images/img1.webp";
-import { useLang } from "@/context/LangContext";
+import { useLang } from "@/app/context/LangContext";
+
 const Siderbar = () => {
     const { translate } = useLang();
 

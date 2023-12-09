@@ -1,7 +1,7 @@
 "use client";
 
-import vi from "@/translate/vi.json";
-import en from "@/translate/en.json";
+import en from "@/app/translate/en.json";
+import vi from "@/app/translate/vi.json";
 
 import { createContext, useContext, useEffect, useState } from "react";
 
