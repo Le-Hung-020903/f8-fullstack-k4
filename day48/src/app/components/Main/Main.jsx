@@ -3,9 +3,9 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-import "../../assets/reset.css";
+import "../../../assets/reset.css";
 import "./Main.scss";
-import img1 from "../../assets/images/img1.webp";
+import img1 from "../../../assets/images/img1.webp";
 import { useLang } from "@/context/LangContext";
 const Siderbar = () => {
     const { translate } = useLang();

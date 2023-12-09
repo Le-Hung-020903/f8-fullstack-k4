@@ -2,7 +2,9 @@
 
 import vi from "@/translate/vi.json";
 import en from "@/translate/en.json";
+
 import { createContext, useContext, useEffect, useState } from "react";
+
 const LangContext = createContext();
 
 const initialLang = localStorage.getItem("lang") ?? "vi";
