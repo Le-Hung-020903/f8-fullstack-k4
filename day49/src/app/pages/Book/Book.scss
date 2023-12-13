@@ -1,0 +1,106 @@
+@use "../../assets/css/variants" as v;
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+.Book-container {
+    background-color: #333333;
+    padding: 50px 0;
+    .Book-inner {
+        width: 1120px;
+        margin: 0 auto;
+        .Book-heading {
+            text-align: center;
+            padding: 25px 0;
+            span {
+                font-size: 35px;
+                background: rgba(255, 165, 0, 0.2);
+                color: v.$primary-color;
+                border-radius: 0.5rem;
+                padding: 0.2rem 1rem;
+                margin: 0 2px;
+            }
+            span.space {
+                background: none;
+            }
+        }
+        .Book-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            .Book-left {
+                flex: 1 1 40px;
+                img {
+                    height: 620px;
+                    width: 620px;
+                }
+            }
+            .Book-right {
+                flex: 1 1 40px;
+                form {
+                    flex: 1 1 40rem;
+                    padding: 20px;
+                    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.15);
+                    border-radius: 10px;
+                    div {
+                        padding: 7px 0;
+                    }
+                    h3 {
+                        font-size: 20px;
+                        padding: 10px 0;
+                        color: v.$primary-color;
+                        font-weight: 700;
+                    }
+
+                    input {
+                        width: 90%;
+                        outline: none;
+                        border: 1px solid v.$primary-color;
+                        border-radius: 3px;
+                        color: #efefef;
+                        padding: 15px 24px;
+                        background-color: transparent;
+                    }
+                    select {
+                        @extend input;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+                        background: transparent;
+                        width: 100%;
+                        color: v.$primary-color;
+                    }
+                    input::placeholder {
+                        color: #efefef;
+                    }
+                    input[type="date"] {
+                        color: #efefef;
+                        font-size: 17px;
+                    }
+                    button {
+                        margin-top: 5px;
+                        display: inline-block;
+                        margin-top: 5px;
+                        background: v.$primary-color;
+                        color: #111;
+                        padding: 13px 30px;
+                        border: 2px solid v.$primary-color;
+                        cursor: pointer;
+                        transition-property: background-color, color;
+                        transition: 0.5s ease;
+                        &:hover {
+                            background: rgba(114, 74, 0, 0.2);
+                            color: v.$primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

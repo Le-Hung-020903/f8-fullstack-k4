@@ -1,0 +1,144 @@
+@use "../../../assets/css/variants" as v;
+
+.FormBook-container {
+    background-color: #fff;
+    padding-top: 90px;
+    .FormBook-inner {
+        width: 1300px;
+        margin: 0 auto;
+        .FormBook-content {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            border-radius: 10px;
+            overflow: hidden;
+            .FormBook-img {
+                object-fit: cover;
+            }
+            .FormBook-title {
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                width: 910px;
+                transform: translateX(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .cityname {
+                    font-weight: bolder;
+                    color: transparent;
+                    -webkit-text-stroke: 0.1rem v.$primary-color;
+                    font-size: 65px;
+                    display: block;
+                }
+                .title {
+                    margin-top: 15px;
+                    font-size: 70px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+                .desc {
+                    margin-top: 25px;
+                    line-height: 1.3;
+                    color: #aaa;
+                    text-align: center;
+                }
+                .btn {
+                    margin-top: 30px;
+                    display: block;
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #333;
+                    outline: none;
+                    border: 2px solid v.$primary-color;
+                    background-color: v.$primary-color;
+                    font-size: 18px;
+                    border-radius: 50px;
+                    transition-property: background-color, color;
+                    transition: 0.3s ease;
+                    &:hover {
+                        color: #fff;
+                        background: rgba(114, 74, 0, 0.2);
+                    }
+                }
+            }
+        }
+        .FormBook-book {
+            position: absolute;
+            bottom: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1150px;
+            border-radius: 10px;
+            background-color: #fff;
+            font-weight: 600;
+            // font-size: 37px;
+            color: v.$primary-color;
+            line-height: 1.3;
+            padding: 15px 15px;
+            align-items: center;
+            box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 10px;
+                div {
+                    // margin-bottom: 10px;
+                    flex-basis: 25%;
+                }
+                .package {
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 1.3;
+                }
+                .inputGroup {
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #333;
+                    }
+
+                    input,
+                    select {
+                        width: 100%;
+                        padding: 10px 10px;
+                        border-radius: 5rem;
+                        border: 2px solid v.$primary-color;
+                        font-size: 16px;
+                        color: #555;
+                        outline: none;
+                        text-transform: none;
+                        background: none;
+                        margin-top: 1rem;
+                    }
+
+                    input[type="text"],
+                    input[type="date"],
+                    input[type="email"] {
+                        width: 80%;
+                    }
+                }
+                .btn {
+                    width: 30%;
+                    padding: 10px 10px;
+                    border-radius: 5rem;
+                    border: 2px solid v.$primary-color;
+                    font-size: 16px;
+                    color: #555;
+                    outline: none;
+                    text-transform: none;
+                    background: none;
+                    margin-top: 45px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

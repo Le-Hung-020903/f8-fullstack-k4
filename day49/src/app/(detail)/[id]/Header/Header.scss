@@ -1,0 +1,78 @@
+@use "../../../assets/css/variants" as v;
+
+.header-container {
+    background: rgba(51, 51, 51, 0.75);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #fff;
+    .header-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 10px 0;
+        .header-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                font-size: 25px;
+                font-weight: 700;
+                span {
+                    color: v.$primary-color;
+                }
+            }
+            .menu {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li {
+                    padding: 15px;
+                    transition: color 1s ease;
+                    font-size: 20px;
+                    a {
+                        color: #fff;
+                        transition: color 0.3s ease;
+                        &:hover {
+                            color: v.$primary-color;
+                        }
+                    }
+                }
+            }
+            .setting {
+                display: flex;
+                column-gap: 50px;
+                .theme {
+                    color: v.$primary-color;
+                    background-color: transparent;
+                    border: 3px solid v.$primary-color;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+                .Book-now {
+                    display: inline-block;
+                    cursor: pointer;
+                    color: #333;
+                    outline: none;
+                    border: 2px solid v.$primary-color;
+                    background-color: v.$primary-color;
+                    font-size: 18px;
+                    padding: 0 10px;
+                    border-radius: 50px;
+                    transition-property: background-color, color;
+                    transition: 0.3s ease;
+                    &:hover {
+                        color: #fff;
+                        background: rgba(114, 74, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
