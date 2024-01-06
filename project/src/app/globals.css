@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-active {
+    @apply text-white py-3 px-2 bg-second rounded-sm leading-normal !important;
+}
+.footer-text {
+    @apply font-extrabold text-2xl mb-5;
+}
+
+.footer-li {
+    @apply text-xl my-2;
+}
+.footer-hover {
+    @apply w-10 h-10 cursor-pointer rounded-full border border-gray-400 flex justify-center items-center transition duration-300 ease-in hover:bg-blue-500 hover:text-white;
+}
+.text-updater-node {
+    height: 50px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+.text-updater-node label {
+    display: block;
+    color: #777;
+    font-size: 12px;
+}
+.react-flow .react-flow__handle {
+    width: 30px;
+    height: 14px;
+    border-radius: 3px;
+    background-color: #784be8;
+}
+
+.react-flow .react-flow__handle-top {
+    top: -10px;
+}
+
+.react-flow .react-flow__handle-bottom {
+    bottom: -10px;
+}
+
+.react-flow .react-flow__node {
+    height: 40px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-width: 2px;
+    font-weight: 700;
+}
+
+.react-flow .react-flow__edge path,
+.react-flow__connectionline path {
+    stroke-width: 2;
+}
+
+.wrapper {
+    flex-grow: 1;
+    height: 100%;
+}
