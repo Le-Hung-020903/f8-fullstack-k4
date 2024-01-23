@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= req?.session?.user?.name %></h1>
+    <a href="/auth/logout" class="btn btn-primary">Đăng xuất</a>
+  </body>
+</html>
