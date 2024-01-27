@@ -1,39 +1,38 @@
 const bcrypt = require("bcrypt");
 const { string } = require("yup");
-const db = require("../models/index");
+const { User } = require("../models/index");
 module.exports = {
   login: (req, res) => {
-    return res.render("auth/login", { req });
+    const userNotFound = req.flash("userNotFound");
+    const passwordIncorrect = req.flash("passwordIncorrect");
+    return res.render("auth/login", { req, userNotFound, passwordIncorrect });
   },
 
   handleLogin: async (req, res) => {
     try {
-      // Xác thực dự liệu gửi từ login form tự làm
-
       const { email, password } = req.body;
-
-      // Kiểm tra tài khoản đã đăng ký hay chưa
-      const user = await db.User.findOne({ email: email });
-
+      const user = await User.findOne({ email: email });
       if (!user) {
-        return res.render("auth/login", {
-          error: "Email hoặc mật khẩu không đúng",
-        });
+        req.flash("userNotFound", "Email hoặc mật khẩu không tồn tại");
+        return res.render("auth/login");
       }
-
       const isCorrectPassword = await bcrypt.compare(user.password, password);
-
       if (!isCorrectPassword) {
-        return res.render("auth/login", {
-          error: "Email hoặc mật khẩu không đúng",
-        });
+        req.flash(
+          "passwordIncorrect",
+          "Mật khẩu không đúng. Vui lòng nhập lại"
+        );
+        return res.render("auth/login");
       }
-    } catch (error) {}
+    } catch (e) {
+      return next(e);
+    }
   },
 
   resgister: (req, res) => {
     return res.render("auth/resgister", { req });
   },
+
   handleResgister: async (req, res) => {
     console.log("test");
     const body = await req.validate(req.body, {
@@ -47,24 +46,15 @@ module.exports = {
         return +value === "1" || +value === "0";
       }),
     });
-
     // if (!body) return res.render("auth/resgister", { req });
-
-    const user = await db.User.create({
-      name: body.name,
-      email: body.email,
-      password: body.password,
-      status: body.status === "1",
-    });
-
+    if (body) {
+      const user = await User.create({
+        name: body.name,
+        email: body.email,
+        password: body.password,
+        status: body.status === "1",
+      });
+    }
     return res.redirect("/auth/login");
-
-    // const user = await User.create({
-    //   name: body.name,
-    //   email: body.email,
-    //   password: body.password,
-    //   status: body.status === "1",
-    // });
-    // console.log(user);
   },
 };

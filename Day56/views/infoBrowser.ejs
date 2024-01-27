@@ -1,0 +1,21 @@
+<h1>Tài khoản Google</h1>
+<div class="d-flex p-3 border column-gap-5">
+  <div>Có <%= devices.length %> thiết bị đã đăng nhập</div>
+  <div>
+    <% devices.forEach((device) => { %>
+    <div class="border-bottom mt-2">
+      <p>Hệ điều hành: <%= device.name %></p>
+      <p>Trình duyệt: <%= device.browsers %></p>
+      <p>
+        Thời gian đăng nhập lần đầu: <%= new
+        Date(device.created_at).toLocaleString() %>
+      </p>
+
+      <p>
+        Thời gian đăng nhập gần nhất: <%= new
+        Date(device.updated_at).toLocaleString() %>
+      </p>
+    </div>
+    <% }) %>
+  </div>
+</div>

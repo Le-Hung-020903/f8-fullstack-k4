@@ -1,5 +1,7 @@
 <h1>Đăng nhập</h1>
-
+<% if (userNotFound?.length) { %>
+<div class="alert alert-danger mt-2"><%= userNotFound %></div>
+<% } %>
 <form class="mb-4" method="post">
   <div class="mb-4">
     <label for="email" class="mb-2">Email</label>
@@ -22,6 +24,9 @@
       placeholder="Your Password..."
     />
     <span class="mt-2 text-danger"> <%= req?.errors?.password %> </span>
+    <% if (passwordIncorrect?.length) { %>
+    <div class="alert alert-danger mt-2"><%= passwordIncorrect %></div>
+    <% } %>
   </div>
   <button class="btn btn-primary">Đăng nhập</button>
   <a href="/auth/resgister" class="btn btn-primary">Đăng ký</a>
