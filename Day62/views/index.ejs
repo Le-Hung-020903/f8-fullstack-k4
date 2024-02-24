@@ -1,0 +1,108 @@
+<h1>Rút gọn liên kết</h1>
+<p>Công cụ rút ngắn liên kết miễn phí, nhanh nhất.</p>
+<div class="row d-flex gap-5 mt-3 w-100 ali">
+  <div class="link-list flex-1 col-8">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Liên kết rút gọn</th>
+          <th width="5%">Liên kết gốc</th>
+          <th>Mật khẩu</th>
+          <th>Lượt truy cập</th>
+          <th>Thời gian tạo</th>
+          <th width="15%">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (links?.length) { %> <% links.map((link, index) => { %>
+        <tr>
+          <td><%= index+1 %></td>
+          <td>
+            <a
+              href="<%= link.shortLink %>"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <%= link.shortLink %>
+            </a>
+          </td>
+          <td>
+            <a
+              href="<%= link.originalLink %>"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <%= link.originalLink %>
+            </a>
+          </td>
+          <td><%= link.password %></td>
+          <td><%= link.websiteTraffic %></td>
+          <td>1 phút trước</td>
+          <td class="d-flex">
+            <button
+              type="button"
+              class="btn btn-danger btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Xóa
+            </button>
+            <button
+              type="button"
+              class="btn btn-info btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Chia sẻ
+            </button>
+            <button
+              type="button"
+              class="btn btn-info btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Sửa
+            </button>
+          </td>
+        </tr>
+        <% }); %> <% } %>
+      </tbody>
+    </table>
+  </div>
+  <div class="link-handle col-3">
+    <form method="post" action="">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Liên kết</label>
+        <input
+          type="text"
+          class="form-control"
+          name="originalLink"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+        <input
+          type="text"
+          name="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Chuyển hướng an toàn (Tránh bị chặn bởi Facebook)</label
+        >
+      </div>
+      <button type="submit" class="btn bg-danger bg-gradient w-100 text-light">
+        Rút gọn
+      </button>
+    </form>
+  </div>
+</div>
